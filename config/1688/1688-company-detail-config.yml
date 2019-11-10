@@ -1,0 +1,15 @@
+open: {id:"1688company",link:"queues",timeout:30,threads:3,brower:"phantomjs-phone",exists:"//a[contains(text(),'公司介绍')]"}
+    click: {xpath:"//a[contains(text(),'公司介绍')]",wait:3000,scroll:1}
+    text: {xpath:"//em[contains(text(),'公司名称')]/parent::div/span",name:"公司名",wait:5000,accurate:"exception"}
+    text: {xpath:"//div[@class='archive-baseInfo-contactInfo']/ul/li[1]",attribute:"innerHTML",name:"联系人",regex:"match|(?<=<span>)(.+?)(?=</span>)"}
+    text: {xpath:"//em[contains(text(),'联系地址')]/parent::div/span",attribute:"innerHTML",name:"联系地址"}
+    text: {xpath:"//div[@class='archive-contact-wangwang']",attribute:"data-loginid",name:"旺旺号"}
+    text: {xpath:"//div[contains(@class,'archive-sheet')]",attribute:"innerHTML",name:"电话",regex:"match|(?<=>)(.+?)(?=</div>)",handler:"M1688PhoneHandler"}
+    text: {xpath:"//div[@class='info-container']/em[contains(text(),'主营产品')]/parent::div/span",name:"主营产品"}
+    text: {xpath:"//div[@class='info-container']/em[contains(text(),'商品数量')]/parent::div",name:"商品数量",attribute:"innerHTML",handler:"DelHTMLTagHandler"}
+    text: {xpath:"//div[@class='info-container']/em[contains(text(),'经营模式')]/parent::div/span",name:"经营模式"}
+    text: {xpath:"//div[@class='info-container']/em[contains(text(),'所在地')]/parent::div/span",name:"所在地"}
+    text: {xpath:"//div[@class='auto-summary-div tp-logo']",attribute:"innerHTML",name:"诚信通",handler:"DelHTMLTagHandler"}
+    text: {xpath:"//div[@class='info-container']/em[contains(text(),'基本信息')]/parent::div/span",attribute:"innerHTML",name:"基本信息",handler:"DelHTMLTagHandler"}
+    text: {xpath:"//div[@class='info-container']/em[contains(text(),'品牌')]/parent::div",attribute:"innerHTML",name:"品牌",handler:"DelHTMLTagHandler"}
+

@@ -1,0 +1,7 @@
+open: {id:"jd-comment-picture.yml",name:"京东评论图片-买家秀",link:"input",timeout:30,rowhandler:"DefaultFolderHandler",threads:1,brower:"chrome",remark:"京东商品评论的图片采集"}
+    click: {xpath:"//div[@id='comment-count']/a",wait:100}
+    click: {xpath:"//ul[@class='filter-list']/li[2]/a",wait:2000}
+    text: {xpath:"//div[@class='sku-name']",name:"文件夹名"}
+    page:{xpath:"//span[@class='J-thumb-next i-next-btn']",wait:1000}
+    list: {xpath:"//div[@class='thumb-list']/ul/li/a/img",wait:1000}
+       text: {xpath:"",attribute:"src",name:"图片链接",download:true,handler:"JDPicture"}

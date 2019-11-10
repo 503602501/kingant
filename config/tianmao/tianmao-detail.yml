@@ -1,0 +1,8 @@
+open: {id:"tianmao-detail",image:false,name:"天猫详情材质保真",link:"input",timeout:30,threads:1,brower:"chrome-phone",remark:"天猫详情页面| //span[@class='price']"}
+     click:{xpath:"//a[text()='关闭']",wait:2000}
+     text: {xpath:"",name:"链接",handler:"TianmaoWebCurrentUrl"}
+     text: {xpath:"//div[@class='module-title']",name:"商品名称"}
+     text: {xpath:"//div[@class='shop-name']",name:"店铺名称"}
+     text: {xpath:"//div[@id='J_PriceBar']/div/div/strong",handler:"TianMaoCaiZhi",name:"价格"}
+     text: {xpath:"//ul[@class='server-list service-item']/li[contains(text(),'材质保真')]",name:"保证"}
+     text: {xpath:"//ul[@class='server-list service-item']/li[contains(text(),'品质健康险')]",name:"品质健康险"}

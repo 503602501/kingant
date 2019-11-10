@@ -1,0 +1,11 @@
+open: {id:"dingtalk-e-ikcrm",image:true,name:"钉钉客户",link:"input",timeout:20,major:true,brower:"chrome",scroll:-1,threads:1,remark:"https://dingtalk.e.ikcrm.com/customers"}
+  page: {xpath:"//li/a/i[@class='fa fa-angle-right']",focus:true}
+    list: {xpath:"//table[@class='table table-striped entity_list_table g_table_sort resizable']/tbody/tr",scroll:-1,wait:4000}
+      text: {xpath:"/div[2]/a/text()",name:"客户名店铺名",fragment:true}
+      text: {xpath:"/div[3]/text()",name:"公司名称",fragment:true}
+      text: {xpath:"/div[4]/text()",name:"老板名称",fragment:true}
+      text: {xpath:"/div[5]/text()",name:"手机",fragment:true}
+      text: {xpath:"/div[6]/text()",name:"微信号",fragment:true}
+      text: {xpath:"/td[8]",name:"联系人",handler:"DelHTMLTagHandler"}
+      text: {xpath:"/td[9]",attribute:"innerHTML",name:"最新跟进记录",handler:"DelHTMLTagHandler"}
+      text: {xpath:"/td[10]/div",name:"固定电话"}

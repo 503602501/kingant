@@ -1,0 +1,4 @@
+open: {id:"jd-shop",name:"京东查询店铺商品",link:"input",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://mall.jd.com/view_search-848510-0-99-1-24-1.html",help:"京东店铺列表"}
+      click:{xpath:"//input[@value='搜本店']"}
+      text :{xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}
+      text :{xpath:"//span[@class='jTotal']/em",name:"商品总数",wait:3000}

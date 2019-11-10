@@ -1,0 +1,5 @@
+open: {id:"anfua-list-main",filter:false,image:false,name:"anfua列表商品图片",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://www.anfua.com/store/120480/category/15842"}
+   text:{xpath:"//div[@class='result']",name:"文件夹名-商品分类目录"}
+   page:{xpath:"//a[@class='down'][text()='下一页']"}
+     list: {xpath:"//ul[@class='list']/li/h3/a"}
+       text: {xpath:"",attribute:"href",name:"商品链接",url:true}

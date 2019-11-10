@@ -1,0 +1,5 @@
+	open: {id:"taobao-shouhuorenshu",name:"淘宝关键词收货人数",init:"https://login.taobao.com/",image:true,sort:true,exportall:true,link:"https://s.taobao.com/search?q=",timeout:10,brower:"chrome",exists:"//button[@class='submit icon-btn-search']|//input[@class='search-combobox-input']",threads:1,major:true}
+   input: {xpath:"//input[@class='search-combobox-input']",value:"input",reload:true,keydown:true}
+     click: {xpath:"//ul[@class='sorts']/li[2]/a",wait:25000}
+     text: {xpath:"//input[@class='search-combobox-input']",attribute:"value",name:"关键词",global:true,wait:1000}
+     text: {xpath:"//div[contains(@class,'deal-cnt')]",name:"收货人数",regex:"replace|人收货",params:""}

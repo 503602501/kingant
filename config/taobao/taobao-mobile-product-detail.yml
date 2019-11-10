@@ -1,0 +1,10 @@
+open: {id:"taobao-mobile-product-detail",urlhandler:"TaoBaoProduct",labels:"sign",name:"淘宝手机端商品信息-协议",link:"input",timeout:15,threads:1,brower:"phantomjs",remark:"淘宝商品信息采集,手机端，http请求的方式采集"}
+    text : {xpath:"",name:"链接"}
+    text : {xpath:"",name:"标题"}
+    text : {xpath:"",name:"价格"}
+    text : {xpath:"",name:"主图"}
+    text : {xpath:"",name:"细节图"}
+    text : {xpath:"",name:"详情图"}
+    text : {xpath:"",name:"尺码"}
+    text : {xpath:"",name:"颜色"}
+

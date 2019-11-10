@@ -1,0 +1,5 @@
+open: {id:"1688-shop-list-url",image:false,name:"1688整店铺商品橱柜和详情页图片",link:"input",timeout:15,threads:1,major:true,brower:"phantomjs-phone",remark:"1688店铺列表"}
+  text :{xpath:"",name:"删除遮罩元素",handler:"M1688DeleteElement",show:false}
+  click:{xpath:"//span[text()='全部商品']/parent::a"}
+  list: {xpath:"//div[@class='item-inner']/a",include:"item-price",scroll:-1,wait:1000}
+         text: {xpath:"",attribute:"href",name:"链接",show:true,handler:"M1688SkuUrl",url:true}

@@ -1,0 +1,5 @@
+open: {id:"adidas-detail",filter:false,image:false,name:"阿迪达斯图片",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://tj.milike.com/estate/1000003.htm###"}
+       text: {xpath:"//div[@class='right-message']/div/div[@class='goods-tit']",name:"文件夹名-系列"}
+       text: {xpath:"//div[@class='pdp-color events-color-close']/h3",name:"文件夹名-货号"}
+       list: {xpath:"//ul[@class='swiper-wrapper']/li/div/a/img"}
+          text: {xpath:"",attribute:"src",name:"图片链接",download:true,regex:"replace|54X54",params:"2000X2000"}

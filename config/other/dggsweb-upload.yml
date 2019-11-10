@@ -1,0 +1,7 @@
+open: {id:"dggsweb-upload",filter:false,image:false,name:"东莞自然资源局",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://121.10.6.230/dggsweb/DGGSASP/Article_Show.asp?ArticleID=5505"}
+       text: {xpath:"//span[@class='pagedetailtitle']",name:"文件夹名-标题"}
+       text: {xpath:"//table[@width='850']",name:"内容"}
+       list: {xpath:"//ui/li"}
+          text: {xpath:"/a",name:"文件链接",attribute:"title",filename:true,show:false}
+          text: {xpath:"/a",name:"文件名",attribute:"href",download:true,show:false}
+           

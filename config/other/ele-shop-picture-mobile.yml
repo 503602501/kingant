@@ -1,0 +1,7 @@
+open: {id:"ele-shop-picture-mobile",image:true,name:"饿了么手机端店铺商品图片",expire:"{date:'20190515',message:'运行异常'}",init:"https://h5.ele.me/",link:"input",timeout:15,threads:1,brower:"chrome-phone",remark:"饿了么店铺的商品图片采集：https://www.ele.me/shop/161852455",rowhandler:"MeituanPictureHandler"}
+   text: {name:"文件夹名-店铺名",xpath:"//span[contains(text(),'评价')]/parent::div/parent::div/h2",wait:1500}
+   text: {xpath:"",name:"test",show:false,handler:"EleEditAttr"}
+   page: {xpath:"//li[contains(@class,'menucategory-active')]/following-sibling::li[not(@aria-label='活动勿删')]",focus:true,wait:1000,count:20}
+   list: {xpath:"//dl/dd/div/span/img",scroll:-1}
+       text: {xpath:"",name:"图片序号",handler:"EleCode"}
+       text: {xpath:"",name:"图片链接",attribute:"src",handler:"EleImage",download:true}

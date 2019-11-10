@@ -1,0 +1,3 @@
+open: {id:"x-yupoo-list-main",filter:false,image:false,name:"YuPoo",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://x.yupoo.com/photos/l13607547722/collections/384150"}
+     list: {xpath:"//div[@class='showindex__parent']/div/a"}
+       text: {xpath:"",attribute:"href",name:"商品链接",url:true,show:false}

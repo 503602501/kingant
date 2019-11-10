@@ -1,0 +1,4 @@
+open: {id:"jd-shop-online",name:"京东店铺留言",link:"input",timeout:30,threads:1,major:true,brower:"chrome",help:""}
+    text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl",wait:1200}
+    text: {xpath:"//div[@class='jLogo']/a",name:"店铺名称"}
+    text: {xpath:"//div[@class='jd-im current']",name:"是否留言"}

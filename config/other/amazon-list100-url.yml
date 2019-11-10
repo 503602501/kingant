@@ -1,0 +1,4 @@
+open: {link:"input",id:"amazon-list100-url",name:"亚马逊Top100链接",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://www.amazon.com/s?k=TPU+key+cover&link_code=qs&sourceid=Mozilla-search&tag=mozilla-20"}
+  page:{xpath:"//li[@class='a-last']"} 
+    list: {xpath:"//ol[@id='zg-ordered-list']/li",wait:2000}
+      text: {xpath:"/span/div/span/a",attribute:"href",name:"链接"}

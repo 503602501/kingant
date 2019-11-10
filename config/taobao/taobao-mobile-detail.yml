@@ -1,0 +1,3 @@
+open: {id:"taobao-mobile-detail",name:"淘宝移动端商品",image:false,link:"input",timeout:10,threads:1,major:true,brower:"chrome-phone",remark:"采集淘宝搜索列表里的普通店铺宝贝（除天猫商品）",help:"功能：淘宝关键词搜索后，采集列表的标题、地区、卖家淘宝名、宝贝链接\n1.关键词放到'采集软件'，点击'启动'，软件打开一个浏览器，自动采集数据\n2.请不要软件控制的浏览器"}
+       text: {xpath:"",name:"移动端商品链接",handler:"CommonCurrentUrl"}
+       text: {xpath:"//span[contains(text(),'材质保证')]",name:"服务"}

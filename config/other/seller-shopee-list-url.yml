@@ -1,0 +1,5 @@
+open: {id:"seller-shopee-list-url",init:"https://seller.shopee.ph/",filter:false,image:false,name:"虾皮订单链接",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://seller.shopee.ph/portal/sale"}
+  click :{xpath:"//div[@class='tabs']/a[1]"}
+  page : {xpath:"//li[not(@class) and text()='Next']",wait:2000}
+     list: {xpath:"//div[contains(@class,'order-items')]/a",scroll:-1}
+       text: {xpath:"",attribute:"href",name:"链接"}

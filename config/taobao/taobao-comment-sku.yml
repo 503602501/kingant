@@ -1,0 +1,9 @@
+open: {id:"taobao-comment-sku",name:"淘宝评论属性",link:"input",timeout:30,threads:1,brower:"chrome",exists:"//ul[@id='J_TabBar']/li[2]",scroll:1,remark:"https://item.taobao.com/item.htm?id=44382201633&price=31-176&original_price=124-704&sourceType=item&sourceType=item&suid=aec1e251-f5d4-433a-bdaf-9ebc5fdd547d&ut_sk=1.WusCOrSYRUQDAOzUyttfQxYB_21646297_1526823034502.TaoPassword-WeiXin.1&un=6374523b7fb18994e7c4cca5375f99dd&share_crt_v=1&cpp=1&shareurl=true&spm=a313p.22.13w.947744984532&short_name=h.WzL6pMp&sm=0d8051&app=chrome"}
+    click: {xpath:"//a[contains(text(),'累计评论')]",wait:2000}
+    page : {xpath:"//li[@class='pg-next']",focus:true}  
+      list: {xpath:"//div[@class='tb-revbd']/ul/li",wait:1000}
+        text: {xpath:"/div[@class='review-details']/div/div[@class='tb-r-act-bar']/div[@class='tb-r-info']/span",name:"评论时间"}
+        text: {xpath:"/div[@class='review-details']/div/div[@class='tb-r-act-bar']/div[@class='tb-r-info']",name:"属性1",handler:"TaoBaoSku",params:"0",attribute:"innerHTML"}
+        text: {xpath:"/div[@class='review-details']/div/div[@class='tb-r-act-bar']/div[@class='tb-r-info']",name:"属性2",handler:"TaoBaoSku",params:"1",attribute:"innerHTML"}
+        text: {xpath:"/div[@class='review-details']/div/div[@class='tb-r-act-bar']/div[@class='tb-r-info']",name:"属性3",handler:"TaoBaoSku",params:"2",attribute:"innerHTML"}
+        text: {xpath:"/div[@class='review-details']/div/div[@class='tb-r-act-bar']/div[@class='tb-r-info']",name:"属性4",handler:"TaoBaoSku",params:"3",attribute:"innerHTML"}

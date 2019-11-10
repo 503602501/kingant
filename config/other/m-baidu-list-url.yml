@@ -1,0 +1,3 @@
+open: {id:"m-baidu-list-url",name:"百度手机端频道图片",link:"input",filter:false,image:true,major:true,brower:"chrome-phone",timeout:30,help:"1.点击需要采集的开始页\n2.设置翻页次数，表示采集多少页",threads:1,remark:"https://seller.shopee.ph/portal/sale"}
+     list: {xpath:"//div[@class='rn-container']/a",scroll:-1}
+       text: {xpath:"",attribute:"href",name:"详情页地址"}

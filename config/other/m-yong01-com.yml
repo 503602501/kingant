@@ -1,0 +1,6 @@
+open: {id:"m-yong01-com",image:true,name:"第一试用网",link:"input",timeout:15,threads:1,brower:"chrome-phone",major:true,init:"http://m.yong01.com/"}
+   list:{xpath:"//a[text()='免费领取']",wait:2000}
+      text: {xpath:"",attribute:"href", name:"链接"}
+      
+      
+       

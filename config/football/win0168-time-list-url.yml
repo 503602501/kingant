@@ -1,0 +1,6 @@
+open: {id:"win0168-time-list-urlss",filter:false,schedule:900,image:true,expire:"{date:'20191015',message:'运行异常'}",name:"win0168足球定时器",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://www.win0168.com/"}
+     click: {xpath:"//a[text()='[显]']",wait:3000}
+     list : {xpath:"//table[@id='table_live']/tbody/tr",include:"bf_img/in.gif|中</font>",exclude:"主场球队",wait:3000,scroll:-1}
+        text: {xpath:"/td[2]",name:"赛事"}
+        text: {xpath:"/td[3]",name:"时间"}
+        text: {xpath:"/td[6]",attribute:"onclick",name:"链接",handler:"WinTimeText",url:true,show:true}

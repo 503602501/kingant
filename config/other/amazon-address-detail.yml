@@ -1,0 +1,7 @@
+open: {id:"amazon-address",filter:false,image:true,name:"亚马商品",link:"queues",major:false,brower:"chrome",timeout:10,threads:0,remark:"https://www.amazon.de/"}
+       text: {xpath:"//div[@data-test-id='shipping-section-buyer-address']/span[1]",name:"姓名"}
+       text: {xpath:"//div[@data-test-id='shipping-section-buyer-address']/span[2]",name:"街道号"}
+       text: {xpath:"//div[@data-test-id='shipping-section-buyer-address']/span[3]",name:"单元号",handler:"AmazonText"}
+       text: {xpath:"//div[@data-test-id='shipping-section-buyer-address']/span[last()-2]",name:"市名"}
+       text: {xpath:"//div[@data-test-id='shipping-section-buyer-address']/span[last()-1]",name:"洲名"}
+       text: {xpath:"//div[@data-test-id='shipping-section-buyer-address']/span[last()]",name:"邮编"}

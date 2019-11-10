@@ -1,0 +1,20 @@
+open: {link:"input",timeout:15,threads:2,name:"ikea商品详情",brower:"phantomjs",rowhandler:"IkeaNameHandler",remark:"https://www.ikea.cn/cn/zh/catalog/products/S69128181/",urlhandler:"IkeaUrlDetail"}
+    text: {xpath:"//div[@id='itemNumber']",name:"产品货号",wait:2000}
+    text: {xpath:"//h1",name:"品名"}
+    text: {xpath:"//span[@id='price1']",name:"单价",regex:"replace|¥",params:""}
+    text: {xpath:"//div[@id='metric']",name:"安装后尺寸"}
+    text: {xpath:"//div[@id='custMaterials']",name:"产品描述"}
+    text: {xpath:"//div[@id='custMaterials']",name:"推荐理由"}
+    text: {xpath:"//div[@id='custMaterials']",name:"相关提示"}
+    text: {xpath:"//div[@id='custMaterials']",name:"保养说明"}
+    text: {xpath:"//div[@id='custMaterials']",name:"另需购"}
+    text: {xpath:"//div[@id='imageThumb_0']/a/img",attribute:"src",name:"图片1",regex:"replace|S3",params:"S5",spare:"//div[@id='Loading']/img",download:true}
+    text: {xpath:"//div[@id='imageThumb_1']/a/img",attribute:"src",name:"图片2",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_2']/a/img",attribute:"src",name:"图片3",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_3']/a/img",attribute:"src",name:"图片4",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_4']/a/img",attribute:"src",name:"图片5",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_5']/a/img",attribute:"src",name:"图片6",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_6']/a/img",attribute:"src",name:"图片7",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_7']/a/img",attribute:"src",name:"图片8",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_8']/a/img",attribute:"src",name:"图片9",regex:"replace|S3",params:"S5",download:true}
+    text: {xpath:"//div[@id='imageThumb_9']/a/img",attribute:"src",name:"图片10",regex:"replace|S3",params:"S5",download:true}

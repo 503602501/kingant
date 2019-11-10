@@ -1,0 +1,6 @@
+open: {id:"shopee-click-like",name:"虾皮店铺商品点赞",link:"input",init:"https://shopee.ph/",timeout:15,threads:1,brower:"chrome",labels:"点赞延迟（秒）",remark:"虾皮网店铺点赞https://shopee.ph/luisone"}
+   click: {xpath:"//span[text()='All Products']/parent::a"}
+   page:{xpath:"//button[@class='shopee-button-outline shopee-mini-page-controller__next-btn']",wait:2000} 
+     list: {xpath:"//div[@class='shopee-item-card__btn-likes']/*[name()='svg']"}
+       click: {xpath:"",wait:1000}
+       text: {xpath:"/div",name:"点赞",handler:"ClickText"}

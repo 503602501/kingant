@@ -1,0 +1,7 @@
+open: {id:"taobao-url-search-list",name:"淘宝链接搜索列表",image:true,link:"input",timeout:30,threads:1,major:true,brower:"chrome",remark:"淘宝链接搜索列表信息采集",help:"功能：在淘宝过滤后的链接，采集列表的标题、地区、卖家淘宝名、宝贝链接\n1.在淘宝网站过滤后的单个链接放到'采集输入'，点击'启动'，软件打开一个浏览器，自动采集数据\n2.请不要软件控制的浏览器"}
+   page:{xpath:"//li[@class='item next']/a/span[text()='下一页']",focus:true,wait:2000}
+       list: {xpath:"//div[@class='grid' or @class='items']/div[contains(@class,'item')]",scroll:-1,wait:2000}
+         text: {xpath:"/div/div/a[contains(@id,'J_Itemlist_TLink')]/text()",name:"标题",fragment:true}
+         text: {xpath:"/div/div/div[@class='location']/text()",name:"地区",fragment:true}
+         text: {xpath:"/div/div/div[@class='shop']/a/span[2]/text()",name:"卖家淘宝名",fragment:true}
+         text: {xpath:"/div/div/a[contains(@id,'J_Itemlist_TLink')]/@trace-nid",fragment:true,name:"宝贝链接",regex:"prefix|https://item.taobao.com/item.htm?id="}

@@ -1,0 +1,4 @@
+open: {id:"shopee-detail-picture",expire:"{date:'20191120',message:'运行异常'}",image:false,urlhandler:"ShopeeUrl",name:"虾皮商品图片",help:"",link:"input",timeout:30,threads:1,brower:"phantomjs",scroll:1,remark:""}
+    text: {xpath:"",name:"文件夹名-商品名"}
+    text: {xpath:"",name:"文件名",filename:true}
+    text: {xpath:"",name:"图片链接",download:true}

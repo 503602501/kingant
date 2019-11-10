@@ -1,0 +1,2 @@
+open: {id:"taobao-ztc-price-list",labels:"转化率低于,降低出价%,低于展示量取消标蓝,过去（7或14或30）天做对比,平均点击花费取消标蓝",image:true,name:"淘宝直通车降价",link:"input",timeout:15,threads:1,major:true,brower:"chrome",init:"http://zhitongche.taobao.com/",remark:"http://zhitongche.taobao.com/",help:"淘宝直通车"}
+   text: {xpath:"",name:"直通车操作步骤",handler:"TaobaoZtPricecHandler"}

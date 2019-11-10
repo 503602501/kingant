@@ -1,0 +1,9 @@
+open: {id:"amazon-derzeit-nicht",filter:false,expire:"{date:'20200715',message:'运行异常'}",exists:"//div[@class='s-result-list s-search-results sg-row']/div",image:true,name:"亚马逊僵尸商品",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.amazon.de/"}
+    list: {xpath:"//div[@class='s-result-list s-search-results sg-row']/div",wait:1000,include:"Derzeit nicht verfügbar"}
+       text: {xpath:"/div/div/div/div[2]/div[2]/div/div[1]/div/div/div[2]/div/span/a/i[1]",handler:"DelHTMLTagHandler",attribute:"innerHTML",name:"星级"}
+       text: {xpath:"/div/div/div/div[2]/div[1]/div/div/span/a",attribute:"href",name:"链接"}
+       text: {xpath:"",name:"ASIN-品牌",show:false,handler:"ASINMarkeText"}
+       text: {xpath:"",name:"ASIN",handler:"ASINText"}
+       text: {xpath:"",name:"品牌",handler:"MarkeText"}
+       text: {xpath:"",name:"排名",handler:"RankText"}
+       text: {xpath:"",name:"评论",handler:"ReviewText"}

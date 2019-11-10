@@ -1,0 +1,3 @@
+open: {id:"milike-detail",filter:false,image:false,name:"寻房网图片",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://tj.milike.com/estate/1000003.htm###"}
+       text: {xpath:"//span[@class='title']",name:"文件夹名-标题"}
+       text: {xpath:"",name:"图片链接",download:true,handler:"MilikeText"}

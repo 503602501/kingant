@@ -1,0 +1,4 @@
+open: {id:"jd-list",name:"京东搜索列表",link:"input",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://mall.jd.com/view_search-848510-0-99-1-24-1.html",help:"京东店铺列表"}
+    list: {xpath:"//div[@id='J_goodsList']/ul/li",scroll:-1}
+      text: {xpath:"/div/div[contains(@class,'p-name')]",name:"商品标题"}
+      text: {xpath:"/div/div[contains(@class,'p-price')]/strong/i",name:"价格"}

@@ -1,0 +1,11 @@
+open: {id:"taobao-web-search-list",name:"淘宝搜索页面列表数据",link:"input",timeout:30,threads:1,major:true,brower:"chrome",remark:"淘宝搜索页面列表数据"}
+   page:{xpath:"//ul[@class='items']/li[@class='item active']/following-sibling::li[1]"}
+       list: {xpath:"//div[@class='items']/div[contains(@class,'item')]",scroll:-1}
+           text: {xpath:"/div[1]/div[1]/div[1]/a",attribute:"data-href",name:"单品链接",regex:"prefix|https:"}
+           text: {xpath:"/div[2]/div[2]",name:"商品名"}
+           text: {xpath:"/div[2]/div[1]/div[1]/strong",name:"单价"}
+           text: {xpath:"/div[2]/div[1]/div[2]",name:"付款人数",regex:"replace|人付款",params:""}
+           text: {xpath:"/div[2]/div[3]/div[1]",name:"店铺名"}
+           text: {xpath:"/div[2]/div[3]/div[2]",name:"地点"}
+           text: {xpath:"/div[1]/div[1]/div[1]/a",attribute:"id",name:"图片ID"}
+           text: {xpath:"/div[1]/div[1]/div[1]/a/img",attribute:"data-src",name:"图片链接",download:true,regex:"prefix|https:"}

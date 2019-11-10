@@ -1,0 +1,3 @@
+open: {id:"anfua-list-url",filter:false,image:false,name:"anfua分类链接",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://www.anfua.com/store/120480/category/15842"}
+     list: {xpath:"//ul[@class='gcategory_menu']/li/h3/a"}
+       text: {xpath:"",attribute:"href",name:"链接"}

@@ -1,0 +1,7 @@
+open: {id:"1688-shop-list-sku-main1",link:"input",name:"1688单品商品属性",timeout:10,threads:1,brower:"chrome-phone",remark:"1688单品采集商品信息",urlhandler:"Open1688Sku"}
+   text: {xpath:"//h1[@class='title-content']/span[@class='title-text']",name:"商品名",wait:3000}
+   text: {xpath:"//span[@class='beigin-text']",spare:"",name:"批次"}
+   text: {xpath:"//span[@class='price-num']",name:"价格",handler:"M1688SkuPrice"}
+   text: {xpath:"//span[contains(text(),'快递费')]/parent::span",name:"快递"}
+   text: {xpath:"//span[@class='value-num']",name:"成交"}
+   text: {xpath:"//div[@class='swipe-content']/div/img",attribute:"src",name:"第一张主图"}

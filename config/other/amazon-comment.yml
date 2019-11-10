@@ -1,0 +1,6 @@
+open: {link:"input",id:"amazon-comment",name:"亚马逊评论",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://www.amazon.com/Amazon-Official-Charger-Adapter-eReaders/product-reviews/B01J2G4VBG/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews"}
+    list: {xpath:"//div[@id='cm_cr-review_list']/div[@data-hook='review']"}
+      text: {xpath:"/div/div/div/a[2]",name:"标签"}
+      text: {xpath:"/div/div/span[@data-hook='review-date']",name:"发表时间"}
+      text: {xpath:"/div/div/div/a[@data-hook='format-strip']",name:"颜色",handler:"AmazonColor"}
+      text: {xpath:"/div/div/div[@class='a-row a-spacing-small review-data']",name:"评语"}

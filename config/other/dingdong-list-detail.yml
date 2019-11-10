@@ -1,0 +1,8 @@
+open: {id:"dingdong-list-detail",filter:false,expire:"{date:'20190415',message:'运行异常'}",image:false,name:"叮咚商品详情",init:"http://old.7dingdong.com/index.php",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://old.7dingdong.com/b2b/b2bgoods?page=2"}
+       text: {xpath:"//h2[@class='title']",name:"文件夹名-商品名称",wait:2000}
+       text: {xpath:"//strong[contains(text(),'运输方式')]/parent::dd",attribute:"innerHTML",name:"运输方式",handler:"DingDongText"}
+       text: {xpath:"//strong[@class='zx_cgj']",name:"指导兑换"}
+       text: {xpath:"//div[@id='enjoy_price']",name:"尊享兑换"}
+       list: {xpath:"//img[contains(@src,'jpg')]"}
+         text: {xpath:"",name:"图片名称",filename:true,handler:"AutoCode"}
+         text: {xpath:"",name:"图片",attribute:"src",download:true}

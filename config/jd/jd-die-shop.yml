@@ -1,0 +1,4 @@
+open: {id:"jd-die-shop.yml",name:"死东延迟发货",link:"input",timeout:30,threads:1,major:true,brower:"chrome",help:""}
+    text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl",wait:1200}
+    text: {xpath:"//div[@id='J-jd-im']",name:"是否联系卖家"}
+    text: {xpath:"//a[@class='jIconRating']/following-sibling::em",name:"评分",handler:"JdDieSore"}

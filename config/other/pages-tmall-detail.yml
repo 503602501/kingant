@@ -1,0 +1,3 @@
+open: {id:"pages-tmall-detail",name:"天猫超市明细",image:false,link:"input",timeout:30,threads:1,brower:"chrome-phone",remark:"https://detail.m.tmall.com/item.htm?spm=a3204.7933263.0.0.5d901f652Xxv2H&id=554777916603&rewcatid=50514008"}
+   text: {xpath:"//div[@class='ic-box']/span[text()='促销']/parent::div/parent::div",name:"是否本店活动",wait:4000}
+   text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl",show:true}

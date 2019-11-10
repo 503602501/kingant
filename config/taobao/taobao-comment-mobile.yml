@@ -1,0 +1,7 @@
+open: {id:"taobao-comment-mobile",name:"淘宝商品评论",link:"input",timeout:30,threads:1,scroll:1,brower:"chrome-phone",exists:"//div[contains(@class,'sys_button gotoRate')]",remark:"手机端淘宝评论采集;http://h5.m.taobao.com/awp/core/detail.htm?spm=a230r.1.14.65.6b5a763acta9fj&id=560800881558&ns=1&abbucket=5#detail",help:"淘宝评论采集\n1.采集输入：放入需要采集的淘宝商品链接\n2.建议采集完一个商品的评论，再采集一个商品的评论"}
+    click: {xpath:"//div[contains(@class,'sys_button gotoRate')]",wait:2000,scroll:-1}
+    page : {xpath:"//div[contains(text(),'下一页')]"}  
+      list: {xpath:"//div[@class='rates_content_list']/ul/li",scroll:-1,wait:1000}
+        text: {xpath:"/div[1]",name:"用户"}
+        text: {xpath:"/div[2]",name:"评语"}
+        text: {xpath:"/div[3]",name:"发表日期"}

@@ -1,0 +1,3 @@
+open: {id:"storyren-url-detail",filter:false,image:false,name:"名人鉄事网URL内容",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.storyren.com/forum-65-1000.html"}
+       text: {xpath:"//h1/strong/span[@id='thread_subject']",name:"标题"}
+       text: {xpath:"//div[@class='pcb']",name:"内容"}

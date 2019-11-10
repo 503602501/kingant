@@ -1,0 +1,8 @@
+open: {id:"tianmao-comment",image:true,name:"天猫商品评论",help:"天猫评论",link:"input",timeout:30,threads:1,brower:"chrome",scroll:1,remark:"天猫商品的评论采集"}
+   click: {xpath:"//a[contains(text(),'累计评价 ')]"}
+   page : {xpath:"//div[@class='rate-paginator']/a[contains(text(),'下一页')]",focus:true}
+     list: {xpath:"//div[@class='rate-grid']/table/tbody/tr",wait:5000}
+       text: {xpath:"/td[@class='tm-col-master']/div[@class='tm-rate-content']",spare:"/td[@class='tm-col-master']/div[@class='tm-rate-premiere']",name:"评论"}
+       text: {xpath:"/td[@class='tm-col-master']/div[@class='tm-rate-date']",name:"评论时间"}
+       text: {xpath:"/td[@class='col-author']/div[@class='rate-user-info']",name:"用户名"}
+       text: {xpath:"/td[@class='col-author']/div[@class='rate-user-grade']",name:"等级"}

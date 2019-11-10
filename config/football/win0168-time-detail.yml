@@ -1,0 +1,13 @@
+open:{id:"win0168-time-list-url",link:"queues",filter:false,urlhandler:"WinTimeUrl",image:false,name:"win0168足球明细定时器",major:true,brower:"chrome",timeout:30,threads:0,remark:""}
+    text:{xpath:"//div[@id='home']",name:"主队",wait:1500}
+    text:{xpath:"//div[@id='guest']",name:"客队"}
+    text: {xpath:"//td[text()='进攻']/parent::tr",name:"主队进攻",handler:"WinTrText",params:"进攻|0"}
+    text: {xpath:"//td[text()='危险进攻']/parent::tr",name:"主队危险进攻",handler:"WinTrText",params:"危险进攻|0"}
+    text: {xpath:"//td[text()='射门']/parent::tr",name:"主队射门",handler:"WinTrText",params:"射门|0"}
+    text: {xpath:"",name:"主队进攻转换",handler:"WinConverText",params:"6|5"}
+    text: {xpath:"",name:"主队射门转换",handler:"WinConverText",params:"7|6"}
+    text: {xpath:"//td[text()='进攻']/parent::tr",name:"客队进攻",handler:"WinTrText",params:"进攻|1"}
+    text: {xpath:"//td[text()='危险进攻']/parent::tr",name:"客队危险进攻",handler:"WinTrText",params:"危险进攻|1"}
+    text: {xpath:"//td[text()='射门']/parent::tr",name:"客队射门",handler:"WinTrText",params:"射门|1"}
+    text: {xpath:"",name:"客队进攻转换",handler:"WinConverText",params:"11|10"}
+    text: {xpath:"",name:"客队射门转换",handler:"WinConverText",params:"12|11"}

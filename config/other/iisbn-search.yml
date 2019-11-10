@@ -1,0 +1,5 @@
+open: {id:"iisbn-search",name:"丁书网",link:"input",labels:"等待时间秒",timeout:10,expire:"{date:'20190420',message:'运行异常'}",threads:1,urlhandler:"IisbnUrl",brower:"chrome",remark:"http://www.iisbn.com/Search.aspx?keywords=9787301050057"}
+    text: {xpath:"//p[contains(text(),'ISBN')]",name:"ISBN",regex:"replace|ISBN:",params:"",handler:"IiBnText"}
+    text: {xpath:"//strong[contains(text(),'会员价')]",name:"会员价",regex:"replace|会员价:",params:""}
+    text: {xpath:"//p[contains(text(),'商家')]",name:"商家",regex:"replace|商家:",params:""}
+    text: {xpath:"//span[contains(text(),'库存数量')]",name:"库存数量",regex:"replace|库存数量：",params:""}

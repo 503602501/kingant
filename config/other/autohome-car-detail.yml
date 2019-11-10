@@ -1,0 +1,8 @@
+open: {id:"autohome-car-detail",filter:false,image:false,name:"汽车之家品牌明细",link:"input",major:true,brower:"chrome",timeout:15,threads:1,remark:"https://www.autohome.com.cn/car/#pvareaid=3311275"}
+     text:{xpath:"//div[@class='series-list']/div[@class='athm-title']/div[1]",name:"品牌"}
+     list: {xpath:"//div[@class='spec-wrap active']/dl->/dd"}
+       text:{xpath:"/div[@class='spec-name']/div/p/a",name:"型号"}
+       text:{xpath:"/parent::dl/dt/div[@class='spec-name']",name:"排量",handler:"AutoHomeText"}
+       text:{xpath:"/div[@class='spec-guidance']/p/span",name:"指导价"}
+       text:{xpath:"/div[@class='spec-guidance']/p/span",name:"商户价"}
+  

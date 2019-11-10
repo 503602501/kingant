@@ -1,0 +1,7 @@
+open: {link:"input",id:"aliexpress-detail",name:"速卖通明细",timeout:15,threads:1,scroll:3,major:true,brower:"chrome",remark:"http://permit.mep.gov.cn/permitExt/outside/Publicity?pageno=1&enterName=&province=&city=&treadcode=&treadname=&xkznum="}
+      text : {xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}
+      text : {xpath:"//div[@class='product-title']",name:"文件夹名-标题"}
+      text : {xpath:"//span[@class='product-price-value']",name:"价格"}
+      text : {xpath:"",name:"文件夹名-详情图片",params:"详情图片"}
+      text : {xpath:"",name:"详情图片链接",handler:"AliexpressImage",download:true}
+      text : {xpath:"",name:"描述",handler:"AliexpressHttpImage"}

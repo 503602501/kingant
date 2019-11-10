@@ -1,0 +1,4 @@
+open: {id:"slide-ent-sina-list-url",labels:"翻页次数",init:"http://slide.ent.sina.com.cn/",link:"",filter:false,image:false,name:"新浪图片批量分页",major:true,brower:"chrome",timeout:30,help:"1.点击需要采集的开始页\n2.设置翻页次数，表示采集多少页",threads:1,remark:"https://seller.shopee.ph/portal/sale"}
+  page : {xpath:"//a[@class='next']",count:0}
+     list: {xpath:"//div[@class='hd']/a",wait:1000}
+       text: {xpath:"",attribute:"href",name:"图片页面链接"}

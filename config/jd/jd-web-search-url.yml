@@ -1,0 +1,3 @@
+open: {id:"jd-web-search-url",name:"京东搜索列表商品链接",link:"input",init:"https://search.jd.com/search?keyword=%E9%AA%91%E8%A1%8C%E5%A4%B4%E5%B7%BE&enc=utf-8&qrst=1&rt=1&stop=1&vt=2&wq=%E9%AA%91%E8%A1%8Ctouj&uc=0#J_searchWrap",timeout:30,threads:1,major:true,brower:"chrome",help:"京东搜索关键词后，采集列表分页的所有商品链接"}
+  list: {xpath:"//ul[@class='J_valueList v-fixed']/li"}
+    text: {xpath:"/a",attribute:"href",name:"链接"}

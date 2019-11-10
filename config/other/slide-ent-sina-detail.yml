@@ -1,0 +1,3 @@
+open: {id:"slide-ent-sina-detail",filter:false,image:false,name:"新浪图片下载",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://slide.ent.sina.com.cn/star/slide_4_704_285076.html#p=1"}
+   text: {xpath:"//div[@class='swp-tit clearfix']",name:"文件夹名-标题",regex:"replace|组图：",params:""}
+   text: {xpath:"//div[@class='swpt-flash-wrap']",attribute:"innerHTML",handler:"SlidePictures",name:"图片链接",download:true}

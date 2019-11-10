@@ -1,0 +1,11 @@
+open: {id:"amazon-derzeit-nicht2",filter:false,expire:"{date:'20200715',message:'运行异常'}",exists:"//div[@class='s-result-list s-search-results sg-row']/div",image:true,name:"亚马逊全部商品",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.amazon.de/"}
+  page:{xpath:"//div[@class='zhonghaichegn']"}
+    list: {xpath:"//div[@class='s-result-list s-search-results sg-row']/div",wait:1000,exclude:"Gesponsert"}
+       text: {xpath:"/div/div/div/div[2]/div[2]/div/div[1]/div/div/div[2]/div/span/a/i[1]",handler:"DelHTMLTagHandler",attribute:"innerHTML",name:"星级"}
+       text: {xpath:"//div[@class='a-section a-spacing-none']/h2/a[@class='a-link-normal a-text-normal']/@href",fragment:true,name:"链接",regex:"prefix|https://www.amazon.com"}
+       text: {xpath:"",name:"ASIN-品牌",show:false,handler:"ASINMarkeText"}
+       text: {xpath:"",name:"ASIN",handler:"ASINText"}
+       text: {xpath:"",name:"品牌",handler:"MarkeText"}
+       text: {xpath:"",name:"排名",handler:"RankText"}
+       text: {xpath:"",name:"评论",handler:"ReviewText"}
+       text: {xpath:"",name:"配送",handler:"PeisongText"}

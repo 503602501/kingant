@@ -1,0 +1,19 @@
+open: {id:"spdex-list",filter:false,image:true,init:"http://c.spdex.com/Login.aspx",expire:"{date:'20190820',message:'运行异常'}",name:"超级指数系统",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"http://www.win0168.com/"}
+   page:{xpath:"//td[@align='left']/span[contains(@style,'red')]/following-sibling::a[not(@disabled)]",wait:5000,scroll:-1}  
+     list : {xpath:"//div[@class='dataviewer']/table/tbody/tr",exclude:"队名",wait:10000,scroll:-1}
+        text: {xpath:"/div[1]",name:"队名",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[2]",name:"竞彩指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[3]",name:"足彩指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[4]",name:"媒体指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[5]",name:"用户指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[6]",name:"必发指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[7]",name:"必发成交",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[8]",name:"比例",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[9]",name:"模拟盈亏",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[10]",name:"必发价位",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[11]",name:"挂牌指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[12]",name:"冷热指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[13]",name:"欧洲平均",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[14]",name:"凯利方差",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[20]",name:"亚洲指数",fragment:true,handler:"DelHTMLTagHandler"}
+        text: {xpath:"/div[21]",name:"比分指数",fragment:true,handler:"DelHTMLTagHandler"}

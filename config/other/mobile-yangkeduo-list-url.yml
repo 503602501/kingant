@@ -1,0 +1,3 @@
+open: {id:"mobile-yangkeduo-list-url",filter:false,image:false,name:"拼多多分类链接",init:"http://mobile.yangkeduo.com/",link:"input",major:true,brower:"phone-chrome",timeout:30,threads:1,remark:"http://mobile.yangkeduo.com/"}
+     list: {xpath:"//img[@class='search-goods-img']"}
+       text: {xpath:"",attribute:"src",name:"链接"}

@@ -1,0 +1,5 @@
+open: {id:"wipo-int-search",filter:false,exportall:true,image:true,init:"https://www.wipo.int/branddb/en/index.jsp",name:"WIPO品牌查询",link:"",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.wipo.int/branddb/en/index.jsp"}
+    input:{xpath:"//input[@id='BRAND_input']",value:"input",keydown:true}
+       text: {xpath:"",name:"品牌",handler:"WipoClean"}
+       text: {xpath:"",name:"是否被注册",handler:"WipoCheck",wait:1500}
+       	

@@ -1,0 +1,9 @@
+open: {id:"hotels-ctrip-jindian",name:"携程旅游景点",link:"input",timeout:20,major:true,brower:"chrome",threads:1,remark:"http://hotels.ctrip.com/hotel/430391.html?isFull=F#ctm_ref=hod_sr_lst_dl_n_1_9"}
+    list: {xpath:"//div[@class='list_wide_mod2']/div[@class='list_mod2']",wait:5000}
+      text: {xpath:"/div[@class='rdetailbox']/dl/dt/a",name:"标题"}
+      text: {xpath:"/div[@class='rdetailbox']/dl/dt/s",name:"排名"}
+      text: {xpath:"/div[@class='rdetailbox']/dl/dd",name:"地址"}
+      text: {xpath:"/div[@class='rdetailbox']/ul/li/a/strong",name:"评分"}
+      text: {xpath:"/div[@class='rdetailbox']/ul/li/a[@rel='nofollow']",name:"点评"}
+      text: {xpath:"/p[@class='xclistcomment ellipsis']/span",name:"口碑"}
+      text: {xpath:"/p[@class='xclistcomment ellipsis']/a",name:"称号"}

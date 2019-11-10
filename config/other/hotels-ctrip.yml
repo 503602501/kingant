@@ -1,0 +1,13 @@
+open: {id:"hotels-ctrip",name:"携程酒店评论",link:"input",timeout:20,major:true,brower:"chrome",threads:1,remark:"http://hotels.ctrip.com/hotel/430391.html?isFull=F#ctm_ref=hod_sr_lst_dl_n_1_9"}
+  page: {xpath:"//a[@class='c_down']"}
+    list: {xpath:"//div[@class='comment_detail_list']/div",wait:2000,scroll:0}
+      text: {xpath:"/div[@class='user_info  J_ctrip_pop']/p[@class='name']",name:"用户名",spare:"/div[@class='user_info J_NoPop']/p[@class='name']"}
+      text: {xpath:"/div[@class='comment_main']/div[@class='comment_txt']/div[@class='J_commentDetail']",name:"评论"}
+      text: {xpath:"/div[@class='comment_main']/div[@class='comment_txt']/div[@class='comment_bar']/p[@class='comment_bar_info']",name:"评论时间"}
+      text: {xpath:"/div[@class='comment_main']/div[@class='htl_reply']/p[@class='text text_other']",name:"回复"}
+      text: {xpath:"/div[@class='comment_main']/p[@class='comment_title']/span[@class='score']",name:"评论评分"}
+      text: {xpath:"/div[@class='comment_main']/p[@class='comment_title']/span[@class='type']",name:"出游类型"}
+      text: {xpath:"/div[@class='comment_main']/p[@class='comment_title']/span[@class='small_c']",attribute:"data-value",name:"位置评分",regex:"match|(?<=位置:)(.+?)(?=,)"}
+      text: {xpath:"/div[@class='comment_main']/p[@class='comment_title']/span[@class='small_c']",attribute:"data-value",name:"设施评分",regex:"match|(?<=设施:)(.+?)(?=,)"}
+      text: {xpath:"/div[@class='comment_main']/p[@class='comment_title']/span[@class='small_c']",attribute:"data-value",name:"服务评分",regex:"match|(?<=服务:)(.+?)(?=,)"}
+      text: {xpath:"/div[@class='comment_main']/p[@class='comment_title']/span[@class='small_c']",attribute:"data-value",name:"卫生评分",regex:"match|(?<=卫生:)(.*)"}

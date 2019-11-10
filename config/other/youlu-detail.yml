@@ -1,0 +1,4 @@
+open: {id:"youlu-detail",labels:"延迟（秒）",filter:false,image:false,name:"有路网ISBN",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/359880396.html"}
+       text:{xpath:"",name:"延迟时间",handler:"DelaySecondText",show:false}
+       text: {xpath:"//div[@class='info']",name:"ISBN",handler:"YouluText"}
+       text: {xpath:"//div[@class='info']/div/span[@class='salePrice']",name:"价格",regex:"replace|￥",params:""}

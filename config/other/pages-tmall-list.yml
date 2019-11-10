@@ -1,0 +1,3 @@
+open: {id:"pages-tmall-list",image:true,scroll:-1,name:"天猫超市链接",link:"input",timeout:30,threads:1,brower:"chrome",remark:"http://smartstore.naver.com/88996/category/50000001?cp=1"}
+    list: {xpath:"//a[@class='mui-chaoshi-item-column-inner']"}
+       text: {xpath:"",attribute:"href",name:"单品链接"}

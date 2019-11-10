@@ -1,0 +1,12 @@
+open: {id:"1688-shop-list-url-sku.yml",link:"queues",exists:"//div[@class='d-content']/div[@class='info']",timeout:15,threads:2,brower:"phantomjs-phone",remark:"1688单品采集商品信息",urlhandler:"Open1688Sku"}
+   text: {xpath:"//h1[contains(@class,'d-title')]",name:"文件夹名-商品名",wait:3000}
+   text: {xpath:"//dl[@class='d-price-rangecount']",spare:"//dl[contains(@class,'d-price-discount larger nobottom')]/dt",name:"批次"}
+   text: {xpath:"//dl[contains(@class,'d-price-discount')]",name:"价格",handler:"M1688SkuPrice"}
+   text: {xpath:"//li[@class='freight']/span[2]",name:"快递"}
+   text: {xpath:"//div[@class='d-content']/ul/li/span[text()='成交']/parent::li/span[2]",name:"成交"}
+   text: {xpath:"//div[@class='d-content']/ul/li/span[text()='发货']/parent::li/span[2]",name:"发货"}
+   text: {xpath:"//div[@class='d-content']/div[@class='info']",name:"评价"}
+   text: {xpath:"//div[@class='c-status']/span",name:"评分"}
+   text: {xpath:"//p[@class='company']",name:"公司"}
+   list: {xpath:"//div[@class='swipe-pane']/img",wait:1000}
+     text: {xpath:"",name:"主图链接",handler:"M1688Picture",download:true,show:false}

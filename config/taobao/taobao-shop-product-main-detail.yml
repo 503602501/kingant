@@ -1,0 +1,8 @@
+open: {id:"taobao-product-url",name:"商品属性信息",link:"queues",timeout:30,threads:0,brower:"chrome"}
+    text: {xpath:"//div[contains(@class,'shop_header')]/div[@class='info']/div/h3",spare:"//div[@aria-label='全部宝贝']/parent::div/div[2]",name:"店名",wait:3000}
+    text: {xpath:"//div[@class='title_share']/h1/span",spare:"//div[contains(@data-tpl-id,'detail_title')]/div/div[2]/span",name:"商品名",handler:"TaobaoText"}
+    text: {xpath:"//div[@class='dt-slider-cont']/ul/li/img",spare:"//div[@class='img-wrapper']/img",attribute:"src",name:"主图",regex:"replace|180x180q90s150.jpg_",params:""}
+    text: {xpath:"//div[@class='d-titletab']/p[1]",spare:"//div[contains(@aria-label,'快递')]",name:"运费"}
+    text: {xpath:"//p[@class='o-t-price']",name:"价格"}
+    text: {xpath:"//div[@class='d-titletab']/p[2]",spare:"//div[contains(@aria-label,'月销')]",name:"月销量"}
+

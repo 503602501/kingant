@@ -1,0 +1,4 @@
+open: {id:"shanghaichuangyiyuan-detail",filter:false,image:false,name:"上海创意园网详情",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+       text: {xpath:"//dd[@class='mark_name']",name:"园区名称"}
+       text: {xpath:"//div[@class='post_detail']",name:"详情"}
+       text: {xpath:"//div[@class='post_detail']",handler:"ShChuangYiYuanText",name:"地址"}

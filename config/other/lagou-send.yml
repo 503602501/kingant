@@ -1,0 +1,5 @@
+open: {link:"input",image:true,id:"lagou-send",urlhandler:"LagouUrl",name:"拉勾网打招呼",init:"https://easy.lagou.com/talent/search/list.htm?keyword=招聘&pageNo=1&city=北京&education=本科及以上&workYear=3年-10年&industryField=不限&expectSalary=13k-25k&isBigCompany=1&searchVersion=1",timeout:15,threads:1,major:true,brower:"chrome",remark:""}
+    list: {xpath:"//div[@class='talent-list']/div[@class='talent-item']"}
+       text: {xpath:"",attribute:"data-userid",name:"用户ID"}
+       text: {xpath:"/div[@class='talent-item-content']/div[@class='user-opt']/div[@class='item-operation']/div[@class='chat operation']",name:"状态"}
+       text: {xpath:"",handler:"LagouSend",name:"打招呼"}

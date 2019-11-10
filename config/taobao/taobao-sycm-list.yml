@@ -1,0 +1,5 @@
+open: {id:"taobao-sycm-list",name:"生意经列表-明细",link:"input",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://mall.jd.com/view_search-848510-0-99-1-24-1.html",help:"生意经列表商品的评论数量，商品名，链接"}
+    list: {xpath:"//div[@class='j-module']/ul/li",scroll:-1}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"评论数量",fragment:true,handler:"JdCommentNumText"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jDesc']/a/@href",name:"链接",fragment:true,handler:"JdCommetValidate"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jDesc']/a/text()",name:"商品名称",fragment:true,handler:"JdCommetValidate"}

@@ -1,0 +1,5 @@
+open: {id:"jd-http-shop-detail",name:"京东请求店铺明细",urlhandler:"JdHttpShopDetail",link:"input",timeout:30,threads:1,major:true,brower:"phantomjs",help:""}
+    text: {xpath:"",name:"店铺链接"}
+    text: {xpath:"",name:"店铺名称"}
+    text: {xpath:"",name:"评分"}
+    text: {xpath:"",name:"货到付款"}

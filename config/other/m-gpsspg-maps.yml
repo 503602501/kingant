@@ -1,0 +1,5 @@
+open: {id:"m-gpsspg-maps",name:"百度地图提取谷歌地球坐标",link:"",timeout:20,image:true,major:true,init:"http://m.gpsspg.com/maps.htm",brower:"chrome",threads:1,remark:""}
+    input: {xpath:"//input[@id='q-q']",value:"input",keydown:true}
+      text: {xpath:"",name:"No",handler:"AutoCode",wait:1000}
+      text: {xpath:"//input[@id='q-q']",attribute:"value",name:"地址"}
+      text: {xpath:"//div[@id='r_html']",name:"坐标",handler:"Gpsspg"}

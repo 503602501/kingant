@@ -1,0 +1,10 @@
+open: {id:"jd-question",image:true,init:"https://plogin.m.jd.com/user/login.action",name:"京东问问",link:"input",timeout:30,threads:1,brower:"chrome-phone",help:"京东问问采集需要先登录！！！",remark:"京东商品问问采集",scroll:-1}
+    text: {xpath:"//div[@id='itemName']",name:"商品名"}
+    click: {xpath:"//div[@class='detail_faqbox_head_num']",focus:true}
+    list: {xpath:"//ul[@class='faq_area']/li",wait:1000,scroll:-1}
+      click:{xpath:"/div[1]"}
+      text:{xpath:"//div[@class='faq_question_desc']",name:"问题",wait:800}
+      list:{xpath:"//ul[@class='faq_answers_list']/li",browerbacks:1,scroll:-1}
+        text: {xpath:"/div[1]",name:"用户"}
+        text: {xpath:"/div[@class='faq_answers_list_desc']",name:"回答"}
+        text: {xpath:"/div[@class='faq_answers_list_time']",name:"发表时间"}

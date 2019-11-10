@@ -1,0 +1,3 @@
+open: {id:"1688-shop-list-sku-main",image:false,name:"1688整店铺商品链接",init:"https://www.1688.com/",link:"input",timeout:15,threads:1,major:true,brower:"chrome",help:"阿里巴巴整店铺商品属性\n1.'采集输入'放入需要采集的店铺链接\n2.采集整店铺的商品属性，不采集图片",remark:"1688店铺列表"}
+  list: {xpath:"//ul[@class='offer-list-row']/li/div[@class='title-new']/a[@class='title-link']",wait:1000}
+         text: {xpath:"",attribute:"href",name:"链接",show:true,handler:"M1688SkuUrl",url:true}

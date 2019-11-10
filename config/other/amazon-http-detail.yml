@@ -1,0 +1,11 @@
+open: {link:"input",id:"amazon-http-detail",urlhandler:"ZmazonhttpUrl",name:"亚马逊http商品信息",timeout:15,threads:1,major:true,brower:"phantomjs",remark:"https://www.amazon.com/s?k=TPU+key+cover&link_code=qs&sourceid=Mozilla-search&tag=mozilla-20"}
+      text: {xpath:"",name:"产品链接",handler:"CommonCurrentUrl"}
+      text: {xpath:"",name:"关键词"}
+      text: {xpath:"",name:"标题"}
+      text: {xpath:"",name:"售价"}
+      text: {xpath:"",name:"回复数" }
+      text: {xpath:"", name:"星级" }
+      text: {xpath:"",name:"品牌"}
+      text: {xpath:"",name:"卖家"}
+      text: {xpath:"",name:"创建时间"}
+      text: {xpath:"",name:"ASIN"}

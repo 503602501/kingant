@@ -1,0 +1,4 @@
+open: {id:"excel-picture-url-download2",expire:"{date:'20200915',message:'运行异常'}",name:"EXCEL批量下载图片-自定义图片名称",link:"input", special:"repeatDownload",timeout:15,threads:1,major:true,brower:"phantomjs",rowhandler:"DefaultFolderHandler",urlhandler:"CommonDefinePicture2",help:"功能：读取EXCEL中的图片链接和自定义的图片名称，批量下载到本地\n1.【采集输入】放入EXCEL所在的目录路径\n2.软件读取EXCEL里的【图片链接】字段,下载图片到本地\n3.图片命名以EXCEL中【图片名称】为准\n4.EXCEL中必须包含两列【图片链接】,【图片名称】",remark:"通用链接图片，自定义图片名称，批量下载图片"}
+   text: {name:"图片名称",filename:true}
+   text: {name:"文件夹名-地址",xpath:""}
+   text: {name:"图片链接",show:true,download:true}

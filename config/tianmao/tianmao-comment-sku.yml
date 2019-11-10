@@ -1,0 +1,11 @@
+open: {id:"tianmao-comment-sku",init:"https://login.tmall.com/",image:true,name:"天猫评论属性",link:"input",timeout:30,threads:1,brower:"chrome",exists:"//ul[@id='J_TabBar']/li[3]",scroll:1,remark:"天猫商品的评论采集，同时采集评论的图片"}
+  click: {xpath:"//a[contains(text(),'累计评价')]",wait:2000,focus:true}
+  page:{xpath:"//div[@class='rate-paginator']/a[contains(text(),'下一页')]",focus:true}
+    list: {xpath:"//div[@class='rate-grid']/table/tbody/tr",wait:1500}
+       text: {xpath:"/td[@class='col-author']",spare:"",name:"用户名",handler:"TianMaoValidate"}
+       text: {xpath:"/td[1]/div[@class='tm-rate-premiere']/div/div[@class='tm-rate-date']",spare:"/td[1]/div[@class='tm-rate-date']",name:"时间"}
+       text: {xpath:"/td[1]/div[@class='tm-rate-content']/div[@class='tm-rate-fulltxt']",spare:"/td[1]/div[@class='tm-rate-premiere']/div[@class='tm-rate-content']/div[@class='tm-rate-fulltxt']",name:"评论"}
+       text: {xpath:"/td[@class='col-meta']/div[@class='rate-sku']/p[1]",name:"属性1"}
+       text: {xpath:"/td[@class='col-meta']/div[@class='rate-sku']/p[2]",name:"属性2"}
+       text: {xpath:"/td[@class='col-meta']/div[@class='rate-sku']/p[3]",name:"属性3"}
+       text: {xpath:"/td[@class='col-meta']/div[@class='rate-sku']/p[4]",name:"属性4"}

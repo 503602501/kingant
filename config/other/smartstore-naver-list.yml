@@ -1,0 +1,4 @@
+open: {id:"smartstore-naver-list",image:true,name:"smartstore列表链接",link:"input",timeout:30,threads:1,brower:"chrome",remark:"http://smartstore.naver.com/88996/category/50000001?cp=1"}
+    page: {xpath:"//div[@class='module_pagination _page_area page-loaded']/a[@aria-selected='true']/following-sibling::a[1]",spare:"//div[@class='paginate _page_area page-loaded']/strong/following-sibling::a",wait:3000,scroll:-1}
+      list: {xpath:"//ul[@class='list']/li/a[1]",spare:"//dl[@class='info']/dt/a[1]",wait:2000}
+       text: {xpath:"",attribute:"href",name:"单品链接"}

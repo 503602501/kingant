@@ -1,0 +1,3 @@
+open: {id:"anfua-list-main",filter:false,image:true,name:"anfua商品明细图片",link:"queues",major:true,brower:"phantomjs",timeout:15,threads:2,remark:"http://www.anfua.com/goods/225345347"}
+   text: {xpath:"//h2[@class='ware_title']",name:"文件夹名-商品名"}
+   text: {xpath:"",name:"图片链接",download:true,handler:"AnfuaText"}

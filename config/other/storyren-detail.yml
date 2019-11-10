@@ -1,0 +1,4 @@
+open: {id:"storyren-detail",filter:false,image:false,name:"名人鉄事网",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.storyren.com/forum-65-1000.html"}
+    list:{xpath:"//form/div[@class='pthread']"}
+       text: {xpath:"/div[@class='pt_title']/a[2]",name:"标题"}
+       text: {xpath:"/div[@class='pt_mess']",name:"内容"}

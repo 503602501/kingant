@@ -1,0 +1,4 @@
+open: {id:"houzz-list",urlhandler:"HouzzUrl",exists:"//a[@class='hz-space-card__image-link-container']",filter:false,image:false,name:"楼梯链接",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.houzz.com/photos/straight-staircase-ideas-phbr1-bp~t_745~a_13-453"}
+    list: {xpath:"//a[@class='hz-space-card__image-link-container']"}
+       text: {xpath:"",attribute:"href",name:"链接"}
+       

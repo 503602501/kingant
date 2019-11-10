@@ -1,0 +1,7 @@
+open:{id:"fanatics-detail",link:"input",filter:false,image:false,name:"fanatics多款式商品图片",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://www.fanatics.com/nfl/arizona-cardinals/arizona-cardinals-nike-womens-custom-game-jersey-black/o-3516+t-47598953+p-23496419431+z-9-1146480319"}
+    text:{xpath:"//ul[@class='breadcrumbs-container']/li[1]/a",name:"文件夹名-一级分类"}
+    text:{xpath:"//ul[@class='breadcrumbs-container']/li[2]/a",name:"文件夹名-二级分类"}
+    list:{xpath:"//div[@class='color-selector-list']/a",spare:"//div[@class='product-title-container']/h1"}
+      click:{xpath:""}
+      text: {xpath:"",handler:"FanaticsText",name:"图片链接",download:true}
+      text: {xpath:"//div[@class='product-title-container']/h1",name:"文件夹名-商品名称"}

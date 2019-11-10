@@ -1,0 +1,6 @@
+open: {id:"suning-comment-picture",name:"苏宁评论图片",link:"input",timeout:15,threads:1,brower:"chrome",exists:"//li[@id='productCommTitle']",remark:"苏宁评论图片采集:https://product.suning.com/0070182168/10104603357.html?adtype=1"}
+    click: {xpath:"//li[@id='productCommTitle']"}
+    text: {xpath:"//h1[@id='itemDisplayName']",name:"文件夹名-商品名"}
+    page:{xpath:"//a[@class='album-right album-arrow r' and @style='visibility: visible;']",wait:1500}
+      list: {xpath:"//div[@class='album-wrapper']/ul[@class='clearfix']/li",wait:1000}
+        text: {xpath:"/p/img",attribute:"src",name:"图片链接",download:true,regex:"replace|100x100.jpg",params:"900x900.jpg"}

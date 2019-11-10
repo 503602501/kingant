@@ -1,0 +1,7 @@
+open: {id:"618",name:"天猫618活动店铺商品",link:"input",timeout:30,threads:1,major:true,brower:"chrome"}
+  list: {xpath:"//li[contains(@class,'item-small')]",scroll:-1}
+     text: {xpath:"",attribute:"innerHTML",name:"商品ID",handler:"Tmall618ID"}
+     text: {xpath:"",attribute:"innerHTML",name:"标题",handler:"Tmall618Title"}
+     text: {xpath:"",attribute:"innerHTML",name:"利益点",handler:"Tmall618Li"}
+     text: {xpath:"",attribute:"innerHTML",name:"价格",handler:"Tmall618Price"}
+     text: {xpath:"",attribute:"innerHTML",name:"想买人数/已付款人数",handler:"Tmall618Count"}

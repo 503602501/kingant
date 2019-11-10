@@ -1,0 +1,3 @@
+open: {id:"fanatics-list-url",filter:false,image:false,name:"fanatics分类链接",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://www.fanatics.com/nfl/arizona-cardinals/all-ladies-gear/o-2450+t-69600119+c-235549997+z-9-675341806?pageSize=96&pageNumber=2&sortOption=TopSellers"}
+     list: {xpath:"//div[@class='column']/div/div/div/div/a"}
+       text: {xpath:"",attribute:"href",name:"链接"}

@@ -1,0 +1,5 @@
+open: {id:"jd-one-img",name:"京东搜索第二张图片下载",expire:"{date:'20200515',message:'运行异常'}",link:"",init:"https://search.jd.com/Search?keyword=",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://mall.jd.com/view_search-848510-0-99-1-24-1.html",help:"京东店铺列表"}
+    input: {xpath:"//input[@id='key']",value:"input",keydown:true,reload:true}
+      text: {xpath:"",handler:"WipoClean",name:"图片名称",filename:true,wait:1500}
+      text: {xpath:"//ul[@class='gl-warp clearfix']/li[1]/div/div/a",attribute:"href",name:"商品链接"}
+      text: {xpath:"",handler:"JdImageText",name:"图片链接",download:true}

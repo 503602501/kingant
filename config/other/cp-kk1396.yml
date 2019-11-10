@@ -1,0 +1,9 @@
+open: {id:"cp-kk1396",filter:false,image:true,name:"彩票大厅",link:"input",schedule:300,major:true,brower:"chrome",timeout:10,threads:1,remark:"https://cp.kk1396.com/xyft/betgame"}
+    text : {xpath:"//div[@class='list_right']/table[2]/tbody/tr[1]/th[3]",name:"期数",regex:"replace| 往期推薦",params:""}
+    list : {xpath:"//div[@class='list_right']/table[2]/tbody/tr[position()>1 and position()<12]"}
+       text: {xpath:"/td[1]",name:"名次"}
+       text: {xpath:"/td[2]",name:"开奖结果"}
+       text: {xpath:"/td[3]",name:"推荐"}
+       text: {xpath:"/td[4]",name:"单双"}
+       text: {xpath:"/td[5]",name:"大小"}
+       

@@ -1,0 +1,4 @@
+open: {id:"tianmao-list-url",image:true,name:"天猫列表链接",help:"天猫列表链接",init:"https://list.tmall.com/",link:"input",timeout:30,threads:1,brower:"chrome",scroll:1,remark:"天猫商品的评论采集"}
+   page : {xpath:"//p[@class='ui-page-s']/a[@title='下一页']"}
+     list: {xpath:"//a[@class='productImg']",wait:60000,scroll:-1}
+       text: {xpath:"",attribute:"onclick",name:"链接",handler:"TianmaoUrl"}

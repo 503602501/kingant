@@ -1,0 +1,19 @@
+open: {id:"dy-feigua",filter:false,image:true,urlhandler:"FeiGuaUrl",labels:"24阀值,3天阀值,7天阀值,15天阀值,30天阀值",name:"飞瓜热门",init:"https://dy.feigua.cn/Member#/Aweme",link:"",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+  page:{xpath:"//button[contains(@class,'active')]/following-sibling::button",count:5}
+    click: {xpath:"//a[text()='点赞最多']"}
+    list : {xpath:"//div[@class='mp-article-list']/table/tbody/tr",moveto:"//div[@id='js-pager-limit']",wait:2000}
+       text: {xpath:"//button[contains(@class,'active')]",name:"周期",global:true}
+       text: {xpath:"/td[2]/div/div[2]/div[1]/a",name:"标题"}
+       text: {xpath:"/td[2]/div/div[2]/div[3]",name:"视频时长",handler:"FeiGuaText"}
+       text: {xpath:"/td[2]/div/div[2]/div[2]/ul/li[1]",name:"热词1"}
+       text: {xpath:"/td[2]/div/div[2]/div[2]/ul/li[2]",name:"热词2"}
+       text: {xpath:"/td[2]/div/div[2]/div[2]/ul/li[3]",name:"热词3"}
+       text: {xpath:"/td[2]/div/div[2]/div[2]/ul/li[4]",name:"热词4"}
+       text: {xpath:"/td[2]/div/div[2]/div[2]/ul/li[5]",name:"热词5"}
+       text: {xpath:"/td[3]/div/div/div[@class='item-title']",name:"博主"}
+       text: {xpath:"/td[4]",name:"点赞数"}
+       text: {xpath:"/td[5]",name:"评论数"}
+       text: {xpath:"/td[6]/div/a[@class='source-play']",attribute:"href",name:"视频链接"}
+       text: {xpath:"/td[3]/div/div/div[@class='item-title']/a",attribute:"href",name:"博主ID",handler:"FeiGuaIdText"}
+       text: {xpath:"/td[3]/div/div/div[@class='item-title']/a",attribute:"href",name:"博主链接",handler:"FeiGuaTextUrl"}
+       

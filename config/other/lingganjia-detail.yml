@@ -1,0 +1,4 @@
+open: {id:"lingganjia-url",filter:false,image:false,name:"灵感家详情",link:"queues",brower:"chrome",timeout:10,threads:0,remark:""}
+       text: {xpath:"//div[@id='s1']/h1",name:"文件夹名-标题"}
+       text: {xpath:"//img[contains(@id,'imgInit')]",name:"图片链接",handler:"LinganjiaImage",download:true}
+       text: {xpath:"//div[@id='s1']",regex:"match|(.+?)(?=首页)",name:"内容"}

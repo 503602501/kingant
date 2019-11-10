@@ -1,0 +1,4 @@
+open: {id:"taobao-shop-order",link:"input",image:true,name:"淘宝退款订单",init:"https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm",link:"https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm",timeout:20,brower:"chrome",threads:1,major:true}
+  page:{xpath:"//button[not(@disabled)][text()='下一页']"}
+    list:{xpath:"//a[contains(@href,'applyRouter')]"}
+      text: {xpath:"",attribute:"href",name:"链接",url:true,show:false}

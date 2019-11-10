@@ -1,0 +1,5 @@
+open: {id:"taobao-product-url",init:"https://www.taobao.com/?spm=2013.1.1581860521.1.313360698YDJq4",name:"淘宝整店铺商品信息",link:"input",timeout:30,threads:1,major:true,brower:"chrome",remark:"淘宝店铺的所有商品信息"}
+   click: {xpath:"//div[@class='all-cats-trigger popup-trigger']/a",wait:1000}
+   page:{xpath:"//a[not(contains(@class,'disable'))][text()='下一页']",wait:2000}
+       list: {xpath:"//dd[@class='detail']/a",wait:5000,scroll:-1}
+         text: {xpath:"",attribute:"href",name:"链接",show:true,handler:"TaoBaoUrl",url:true}

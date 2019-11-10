@@ -1,0 +1,7 @@
+open: {id:"720yun-list",filter:false,image:false,name:"720全景图",init:"https://720yun.com/channel",link:"",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+  page:{xpath:"//li[@title='下一页']",focus:true,until:"//div[contains(@class,'ProductList_list')]/div"}
+    list: {xpath:"//div[contains(@class,'ProductList_list')]/div"}
+       text: {xpath:"/div[1]/a",attribute:"href",name:"链接"}
+       text: {xpath:"/div[2]/h3",name:"标题"}
+       text: {xpath:"/div[2]/div[1]/a",name:"作者"}
+       text: {xpath:"/div[2]/div[1]/a",handler:"MobileFilter",name:"电话"}

@@ -1,0 +1,11 @@
+open: {id:"taobao-product-detail",name:"淘宝商品详情信息",init:"https://www.taobao.com/",link:"input",timeout:15,threads:1,brower:"chrome",remark:"淘宝商品信息采集，电脑端"}
+    text : {xpath:"//h3[@class='tb-main-title']",name:"产品标题",wait:7000}
+    text : {xpath:"//div[@id='description']",name:"详情页描述",attribute:"innerHTML"}
+    text : {xpath:"//ul[@id='J_UlThumb']/li[1]/div/a/img",attribute:"src",name:"主图",handler:"TaoBaoZhuImage"}
+    text : {xpath:"//ul[@id='J_UlThumb']/li/div/a/img",name:"附图",handler:"TaoBaoDetail"}
+    text : {xpath:"//ul[@data-property='尺码']/li/a",name:"尺码",handler:"TaoBaoSize"}
+    text : {xpath:"//ul[@data-property='颜色分类']/li/a/span",name:"颜色分类",handler:"TaoBaoSize"}
+    text : {xpath:"//ul[@class='J_TSaleProp tb-img tb-clearfix']/li/a",name:"颜色选项图片",handler:"TaoBaoSize"}
+    text : {xpath:"//em[@id='J_PromoPriceNum']",name:"淘价格",handler:"TaoBaoPrice"}
+    text : {xpath:"//strong[@id='J_StrPrice']",name:"价格",handler:"TaoBaoPrice"}
+

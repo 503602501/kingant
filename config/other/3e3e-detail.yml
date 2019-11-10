@@ -1,0 +1,12 @@
+open: {link:"queues",id:"3e3e-list",timeout:30,threads:2,brower:"phantomjs",remark:"http://www.3e3e.cn/product/oqgcsac.html",scroll:-1}
+    text: {name:"ID",handler:"AutoCode",wait:1000}
+    text: {xpath:"//a[@class='merchant-title']",name:"文件夹名-店铺名"}
+    text: {xpath:"//div[@class='product-details']/h5/span",name:"名稱"}
+    text: {xpath:"//p[@class='price']/strong",name:"價格"}
+    text: {xpath:"//p",name:"描述",params:""}
+    text: {name:"圖片",handler:"E3E3PicturePath"}
+    text: {name:"數量",params:100}
+    text: {name:"重量",params:"0.05"}
+    text: {xpath:"//div[@class='properties-box']",name:"商品選項",handler:"E3E3Item"}
+    text: {name:"出貨天數",params:"10"}
+    text: {name:"下载图片链接",download:true,handler:"E3E3Picture"}

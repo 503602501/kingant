@@ -1,0 +1,5 @@
+open: {id:"duitang-list-picture",name:"堆糖列表图片",link:"input",timeout:15,threads:1,brower:"chrome",labels:"收藏数量,点赞数量",remark:"https://www.designbyhumans.com/shop/page/3/?q=car"}
+   list: {xpath:"//div[@class='woo-pcont stpics clr woo-masned']/div",scroll:-1}
+     text: {xpath:"/div/div[2]/div[2]/span[1]",name:"收藏"}
+     text: {xpath:"/div/div[2]/div[2]/span[2]",name:"点赞"}
+     text: {xpath:"/div/div[1]/a/img",name:"图片链接",attribute:"src",download:true,handler:"DuitangFilterUrl"}

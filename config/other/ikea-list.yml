@@ -1,0 +1,3 @@
+open: {id:"ikea-list",name:"ikea整店铺货号",link:"input",timeout:10,threads:1,brower:"chrome",remark:"https://www.ikea.cn/cn/zh/catalog/categories/departments/living_room/10654/"}
+  list:{xpath:"//a[contains(@onclick,'ProductClicked')]"}
+    text: {xpath:"",attribute:"href",name:"货号",handler:"IkeaUrlText"}

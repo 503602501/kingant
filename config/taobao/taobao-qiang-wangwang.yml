@@ -1,0 +1,6 @@
+open: {id:"taobao-qiang-wangwang",name:"淘抢购旺旺",link:"input",timeout:15,threads:1,brower:"chrome",remark:"https://qiang.taobao.com/category.htm?spm=a21bz.7725273.2164140.1.32003db8dSWwKP&categoryId=312000"}
+    click: {xpath:"//ul[@class='sort-box']/li[2]"}
+    list : {xpath:"//a[@class='qg-item qg-ing' or @class='qg-item qg-will']",scroll:-1,wait:2000}
+      text : {xpath:"",attribute:"href",name:"旺旺",handler:"TaojinbiText"}
+      text : {xpath:"",attribute:"href",name:"商品链接",handler:"QiangTaoBaoProductUrl"}
+

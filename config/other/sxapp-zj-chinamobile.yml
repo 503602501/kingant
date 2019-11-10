@@ -1,0 +1,26 @@
+open: {id:"sxapp-zj-chinamobile",image:true,name:"微信助手-熟客登记",link:"this",timeout:15,threads:1,brower:"chrome-phone",major:true,init:"http://sxapp.zj.chinamobile.com/home/index/ywdj"}
+   click:{xpath:"//span[text()='业务推荐']/parent::a",wait:1000}
+   input:{xpath:"//input[@id='phonexxx']",value:"input"}
+      click:{xpath:"//button[@id='qbtn']",wait:100}
+      click:{xpath:"//span[text()='确定']",wait:2000}
+      text: {xpath:"//input[@id='phonexxx']",attribute:"value", name:"手机号码"}
+      text: {xpath:"//div[text()='基本信息']/following-sibling::div",name:"性别",handler:"SxappText"}
+      text: {xpath:"//div[text()='基本信息']/following-sibling::div",name:"年龄",handler:"SxappText"}
+      text: {xpath:"//div[text()='基本信息']/following-sibling::div",name:"近3月话费",handler:"SxappText"}
+      text: {xpath:"//div[text()='基本信息']/following-sibling::div",name:"近3月通话时长",handler:"SxappText"}
+      text: {xpath:"//div[text()='基本信息']/following-sibling::div",name:"近3月流量",handler:"SxappText"}
+      text: {xpath:"//div[contains(text(),'飞悦升档')]",name:"飞悦升档"}
+      text: {xpath:"//div[contains(text(),'流量提档')]",name:"流量提档"}
+      text: {xpath:"//div[contains(text(),'终端活动---儿童手表目标用户')]/following-sibling::div",name:"终端活动——儿童手表目标用户",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'宽带家庭版目标用户')]/following-sibling::div",name:"宽带——宽带家庭版目标用户",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'宽带个人版目标用户')]/following-sibling::div",name:"宽带——宽带个人版目标用户",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'终端活动---明星机目标用户')]/following-sibling::div",name:"终端活动---明星机目标用户",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'双卡槽目标用户')]/following-sibling::div",name:"双卡槽——双卡槽目标用户",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'推荐爱奇艺')]/following-sibling::div",name:"重视频——推荐爱奇艺",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'推荐抖音')]/following-sibling::div",name:"重视频——推荐抖音",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'终端活动---明星机（直降）')]",name:"终端活动---明星机（直降）",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'终端活动---政企智能后视镜目标用户')]",name:"终端活动---政企智能后视镜目标用户",handler:"SxappYNText"}
+      text: {xpath:"//div[contains(text(),'终端活动---明星机（高价值直降）')]",name:"终端活动---明星机（高价值直降）",handler:"SxappYNText"}
+      
+      
+       

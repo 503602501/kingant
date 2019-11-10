@@ -1,0 +1,4 @@
+open: {id:"1688-product-picture",image:true,name:"1688单品橱柜和详情页图片",link:"input",timeout:15,threads:1,brower:"chrome-phone",remark:"1688单品的主图和详情页图片采集",urlhandler:"Open1688Sku",help:"1.批量1688商品链接\n2.采集橱柜和详情页图片.\n3.图片放到以商品名称命名的文件夹.\n4.不采集商品的信息"}
+   text: {xpath:"//h1[@class='title-content']",name:"文件夹名-商品名"}
+   list: {xpath:"//img[contains(@data-lazyload-src,'.jpg') or contains(@swipe-lazy-src,'.jpg')  or contains(@src,'.jpg')]",moveto:"//div[contains(@class,'m-detail-price-warning')]",wait:5000}
+     text: {xpath:"",name:"图片链接",handler:"M1688Picture",download:true,show:true}

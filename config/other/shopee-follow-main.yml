@@ -1,0 +1,4 @@
+open: {id:"shopee-follow-main",filter:false,image:false,name:"虾皮店铺买家链接",link:"input",major:true,brower:"chrome",timeout:15,threads:1,remark:"https://shopee.ph/"}
+     list: {xpath:"//div[contains(@class,'username')]",scroll:-1}
+        text:{xpath:"",attribute:"data-username",name:"链接",regex:"prefix|https://shopee.ph/"}
+  

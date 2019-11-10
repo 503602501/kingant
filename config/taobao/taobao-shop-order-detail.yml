@@ -1,0 +1,10 @@
+open: {id:"taobao-shop-order",link:"queues",image:true,name:"淘宝退款订单明细",init:"https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm",timeout:15,brower:"chrome",threads:0,major:true}
+   text: {xpath:"//span[text()='订单编号']/parent::span/following-sibling::div/a/span",name:"订单编号"}
+   text: {xpath:"//span[text()='卖家']/parent::span/following-sibling::div/span",name:"卖家"}
+   text: {xpath:"//span[text()='退款金额']/parent::span/following-sibling::div/span",name:"退款金额"}
+   text: {xpath:"//div[@class='order-info']",attribute:"innerHTML",name:"物流公司",handler:"TaoBaoOrderHtml"}
+   text: {xpath:"//div[@class='order-info']",attribute:"innerHTML",name:"运单号",handler:"TaoBaoOrderHtml"}
+   text: {xpath:"//div[@class='mod-logisticsdetail-inner-detail']/div[1]",attribute:"innerHTML",name:"评语",handler:"TaoBaoOrderHtml"}
+   text: {xpath:"//span[@class='fullname']",name:"收货人"}
+   text: {xpath:"//span[@class='mobile']",name:"收货人电话"}
+   text: {xpath:"//span[text()='收货地址：']/following-sibling::span",name:"收货人地址"}

@@ -1,0 +1,3 @@
+open: {id:"shanghaichuangyiyuan-list",filter:false,image:false,name:"上海创意园网链接",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+    list: {xpath:"//dd[@class='item_title']/a"}
+       text: {xpath:"",attribute:"href",name:"链接"}

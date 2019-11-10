@@ -1,0 +1,4 @@
+open: {id:"taobao-taojinbi-wangwang",name:"淘金币旺旺",link:"input",scroll:-1,timeout:15,threads:1,brower:"chrome",remark:"https://taojinbi.taobao.com/navigator.htm?spm=0.0.0.0.pGdV8F&blockId=100122&navId=51"}
+    list : {xpath:"//a[@class='topic-item']"}
+      text : {xpath:"",attribute:"href",name:"旺旺",handler:"TaojinbiText"}
+

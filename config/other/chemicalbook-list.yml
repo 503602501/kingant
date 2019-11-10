@@ -1,0 +1,3 @@
+open: {id:"chemicalbook-list",filter:false,image:false,name:"chemicalbook列表",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://www.chemicalbook.com/ProdSupplierGN.aspx?CBNumber=CB3169203&ProvID=1000&start=1"}
+         list: {xpath:"//table[@id='ContentPlaceHolder1_ProductClassDetail']/tbody/tr",exclude:"中文名称"}
+           text: {xpath:"/td[1]/a",attribute:"href",name:"CAS链接"}

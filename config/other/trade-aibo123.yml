@@ -1,0 +1,10 @@
+open: {schedule:3600,id:"trade-aibo123",name:"爱波网123",link:"input",timeout:10,threads:1,brower:"chrome",remark:"https://www.ikea.cn/cn/zh/catalog/categories/departments/living_room/10654/"}
+  list:{xpath:"//div[@class='tzScroll']/table/tbody/tr[not(@style)]"}
+    text: {xpath:"/td[1]",name:"隐/场"}
+    text: {xpath:"/td[2]",name:"赛事/时间"}
+    text: {xpath:"/td[3]",name:"主队"}
+    text: {xpath:"/td[4]",name:"让"}
+    text: {xpath:"/td[5]",name:"客队"}
+    text: {xpath:"/td[6]",name:"胜"}
+    text: {xpath:"/td[7]",name:"平"}
+    text: {xpath:"/td[8]",name:"负"}

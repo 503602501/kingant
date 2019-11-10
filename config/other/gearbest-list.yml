@@ -1,0 +1,3 @@
+open: {id:"gearbest-list",filter:false,image:false,name:"gearbest链接",exists:"//ul[@class='clearfix js_seachResultList']/li",link:"input",major:true,brower:"chrome",timeout:8,threads:1,remark:"https://www.gearbest.com/appliances-c_12245/?page_size=120"}
+     list: {xpath:"//ul[@class='clearfix js_seachResultList']/li/a"}
+       text: {xpath:"",attribute:"href",name:"链接"}

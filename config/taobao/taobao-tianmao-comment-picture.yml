@@ -1,0 +1,6 @@
+open: {id:"taobao-tianmao-comment-picture",name:"淘宝天猫评论图片-买家秀",link:"input",timeout:30,threads:1,brower:"chrome",scroll:1,remark:"淘宝-天猫-评论的图片"}
+   click:{xpath:"//a[contains(text(),'累计评论') or contains(text(),'累计评价')  ]"}
+   click:{xpath:"//input[contains(@id,'J_RateWithPicture')]",spare:"//input[@id='reviews-t-val3']",wait:3000}
+   page :{xpath:"//a[text()='下一页>>']",spare:"//li[@class='pg-next']"}
+       list: {xpath:"//li[@data-src]",spare:"//img[@swf-src]",wait:1000}
+         text: {xpath:"",name:"图片链接",handler:"TaobaoCommentPicture",download:true}

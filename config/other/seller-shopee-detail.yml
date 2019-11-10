@@ -1,0 +1,7 @@
+open: {id:"seller-shopee-detail",init:"https://seller.shopee.ph/",filter:false,image:true,name:"虾皮订单电话",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://seller.shopee.ph/portal/sale"}
+   text: {xpath:"",name:"订单链接",handler:"CommonCurrentUrl"}
+   text: {xpath:"//div[@class='id row grid']/div/div[@class='detail indent-more']",name:"OrderId",wait:2500}
+   text: {xpath:"//div[@class='address row']/div[@class='detail indent-more']",regex:"match|(.+?)(?=,)",name:"姓名"}
+   text: {xpath:"//div[@class='address row']/div[@class='detail indent-more']",attribute:"innerHTML",regex:"match|(?<=,)(.+?)(?=<br>)",name:"电话",accurate:"exception"}
+   text: {xpath:"//div[text()='Logistic Information']/parent::div//following-sibling::div[@class='detail indent-more']/span[1]",name:"LogisticInfo"}
+   text: {xpath:"//div[text()='Merchandise Subtotal']/following-sibling::div",name:"MerchandiseSubtotal",regex:"replace|₱",params:""}

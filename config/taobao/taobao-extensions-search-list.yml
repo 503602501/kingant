@@ -1,0 +1,10 @@
+open: {id:"taobao-extensions-search-list",labels:"翻页次数",init:"https://s.taobao.com/search?q=1",extensions:"dianzhengtan",name:"淘宝搜索列表-店侦探",image:false,link:"",timeout:30,threads:1,major:true,brower:"chrome",remark:"淘宝搜索列表信息采集",help:"集成店侦查插件，能够采集商品类目\n功能:在浏览器中输入关键词搜索和筛选条件后，在软件中设置采集页数，采集列表的商品信息\n操作：\n1.在软件打开的浏览器中，输入淘宝关键词,点击查询按钮，设置筛选条件\n2.在软件中设置->翻页次数，输入需要采集多少个页面\n3.点击启动，软件会自动控制浏览器，进行采集\n注意：如果采集页面较多，可能需要登录账号，不然会弹验证码；软件打开的浏览器请勿关闭"}
+   page:{xpath:"//li[@class='item next']/a/span[text()='下一页']",focus:true,wait:2000,count:0}
+       list: {xpath:"//div[@class='grid' or @class='items']/div[contains(@class,'item')]",scroll:-1,wait:3000}
+         text: {xpath:"/div/div/a[contains(@id,'J_Itemlist_TLink')]/text()",name:"标题",fragment:true}
+         text: {xpath:"/div/div/div[contains(@class,'price')]/strong/text()",name:"价格",fragment:true}
+         text: {xpath:"/div/div/div[@class='location']/text()",name:"地区",fragment:true}
+         text: {xpath:"/div/div/div[@class='shop']/a/span[2]/text()",name:"卖家淘宝名",fragment:true}
+         text: {xpath:"/div/div/div[@class='deal-cnt']/text()",name:"付款或收货人数",fragment:true}
+         text: {xpath:"/div[@class='dzt-ext-info-bar']/div/span/div[1]/text()",name:"类目",fragment:true}
+         text: {xpath:"/div/div/a[contains(@id,'J_Itemlist_TLink')]/@trace-nid",fragment:true,name:"宝贝链接",regex:"prefix|https://item.taobao.com/item.htm?id="}

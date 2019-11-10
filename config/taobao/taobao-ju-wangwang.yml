@@ -1,0 +1,5 @@
+open: {id:"taobao-ju-wangwang",name:"聚划算旺旺",image:false,link:"input",scroll:-1,major:true,timeout:15,threads:1,brower:"chrome",remark:"https://qiang.taobao.com/category.htm?spm=a21bz.7725273.2164140.1.32003db8dSWwKP&categoryId=312000"}
+      list : {xpath:"//ul[@id='juList']/li"}
+        text : {xpath:"/div/a",attribute:"href",name:"旺旺",handler:"TaojinbiText"}
+        text : {xpath:"/div/a",attribute:"href",name:"商品链接",handler:"TaoBaoProductUrl"}
+

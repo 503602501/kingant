@@ -1,0 +1,17 @@
+open: {id:"smartstore-naver-detail",name:"smartstore商品详情",image:false,link:"input",timeout:30,threads:1,brower:"chrome",rowhandler:"SmartstoreFolderHandler",remark:"http://smartstore.naver.com/88996/category/50000001?cp=1"}
+   text: {xpath:"//dt[@class='prd_name']",name:"商品名",wait:2000}
+   text: {xpath:"//div[@class='_selectbox_auto']/div/div",name:"第一列下拉名称"}
+   text: {xpath:"//select",attribute:"innerHTML",name:"第一列下拉内容",handler:"SmartstoreStyle"}
+   text: {xpath:"//p[@class='fc_point sale']/strong/span",name:"折扣价",regex:"replace|,",params:""}
+   text: {xpath:"//div[@class='bimg']/div/img",show:false,download:true,attribute:"src",name:"主图链接",handler:"SmartStoreOther"}
+   text: {xpath:"",name:"主图片名",handler:"SmartstoreImageName",params:"4"}
+   text: {xpath:"//div[@class='_thumbnail_area thmb_lst more']/span[@class='_image_box'][position()>1]/img",show:false,download:true,attribute:"href",name:"附加图链接",handler:"SmartStoreOther"}
+   text: {xpath:"",name:"附加图片名",handler:"SmartstoreImageName",params:"6"}
+   text: {xpath:"//img[@data-attachment-id]",attribute:"src",name:"详情图片",handler:"SmartStorePic"}
+   text: {xpath:"//p[@class='sale']/strong/span",name:"销售价",regex:"replace|,",params:""}
+   text: {xpath:"//p[@class='fc_point sale']/span/em/span",name:"折价",regex:"replace|,",params:""}
+   text: {xpath:"//div[@class='loc']",name:"类目",handler:"SmartStoreCatalog"}
+   text: {xpath:"//ul[@class='_check_option']/li[2]/div/div/div",name:"第二列下拉名称"}
+   text: {xpath:"//ul[@class='_check_option']/li[2]/div/select",attribute:"innerHTML",name:"第二列下拉内容",handler:"SmartstoreStyle"}
+   text: {xpath:"//em[text()='배송비']/following-sibling::span",name:"运费",handler:"SmartStoreFare"}
+   text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl",show:true}

@@ -1,0 +1,11 @@
+open: {id:"taobao-shop-activity",name:"淘宝商品活动",link:"input",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://mall.jd.com/view_search-848510-0-99-1-24-1.html",help:"生意经列表商品的评论数量，商品名，链接"}
+    list: {xpath:"//div[@class='j-module']/ul/li",scroll:-1}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动编号"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动名称"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动详情"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动开始"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动结束"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动持续"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"状态"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"活动链接"}
+      text: {xpath:"/div/div[@class='jGoodsInfo']/div[@class='jPrice']/div[@class='jExtra']/a/em/text()",name:"商品"}

@@ -1,0 +1,5 @@
+open: {id:"taobao-detail-picture",image:true,rowhandler:"DownloadPictureFolderHandler",name:"淘宝详情页图片",help:"淘宝详情页图片",link:"input",timeout:30,threads:1,brower:"chrome",scroll:1,remark:""}
+     list: {xpath:"//img[@align='absmiddle']",scroll:-1}
+       text: {xpath:"",name:"序号",handler:"AutoIncreaseCode"}
+       text: {xpath:"",name:"图片名称",filename:true,handler:"AutoCode"}
+       text: {xpath:"",attribute:"src",name:"图片链接",download:true}

@@ -1,0 +1,6 @@
+open: {id:"uksoccershop-list-detail",filter:false,image:true,exists:"//div[@id='productsection']/h1",name:"uksoccershop商品明细图片",link:"input",major:true,brower:"chrome",timeout:20,threads:1,remark:"https://www.uksoccershop.com/p-59264/adidas-Nitrocharge-3.0-Mens-Astro-Turf-Trainers-(Black-White-Flash).html"}
+   text: {xpath:"//div[@id='main_product_content']/ul/li[last()-2]/a",name:"文件夹名-商品名3"}
+   text: {xpath:"//div[@id='main_product_content']/ul/li[last()-1]/a",name:"文件夹名-商品名2"}
+   text: {xpath:"//div[@id='main_product_content']/ul/li[last()]/a",name:"文件夹名-商品名1"}
+   list:{xpath:"//a[@class='imggallery']"}
+       text: {xpath:"",attribute:"onclick",name:"图片链接",download:true,handler:"UksoccershopText"}

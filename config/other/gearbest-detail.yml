@@ -1,0 +1,9 @@
+open: {id:"gearbest-detail",filter:false,image:false,name:"gearbest商品详情",exists:"//div[@id='js-panelIntroNormalPrice']",link:"input",major:true,brower:"phantomjs",timeout:5,threads:3,remark:"https://seller.shopee.ph/portal/sale"}
+   text: {xpath:"//ul[@class='cGoodsCrumb_wrap']/li[2]",name:"一级目录"}
+   text: {xpath:"//ul[@class='cGoodsCrumb_wrap']/li[3]",name:"二级目录"}
+   text: {xpath:"//div[@class='goodsIntro_titleWrap']",name:"标题"}
+   text: {xpath:"//div[@class='slick-track']/div/div/span/img",attribute:"data-normal-src",name:"主图链接"}
+   text: {xpath:"//div[@id='js-panelIntroPromoPrice']/div/span",spare:"//div[@id='js-panelIntroNormalPrice']/span",name:"价格"}
+   text: {xpath:"//div[@class='goodsIntro_score']/a[@href='#anchorGoodsReviews']",name:"好评数",regex:"replace|Customer Reviews",params:""}
+   text: {xpath:"//div[@class='product_pz_info mainfeatures']",name:"产品描述"}
+   text: {xpath:"",name:"产品链接",handler:"CommonCurrentUrl"}

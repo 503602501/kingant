@@ -1,0 +1,3 @@
+open: {id:"uksoccershop-list-main",filter:false,image:false,exists:"//div[@class='productname']/a",name:"uksoccershop列表商品链接",link:"input",major:true,brower:"chrome",timeout:12,threads:1,remark:"https://www.uksoccershop.com/football-boots/adidas/nitrocharge"}
+   list: {xpath:"//div[@class='productname']/a"}
+       text: {xpath:"",attribute:"href",name:"商品链接"}

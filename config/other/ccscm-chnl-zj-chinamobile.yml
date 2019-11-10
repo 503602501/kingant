@@ -1,0 +1,32 @@
+open: {id:"ccscm-chnl-zj-chinamobile",image:true,name:"移动合作渠道",link:"https://ccs.chnl.zj.chinamobile.com/business?service=page/business&menuType=2",major:true,init:"https://ccs.chnl.zj.chinamobile.com",timeout:15,threads:1,brower:"chrome",remark:"https://ccs.chnl.zj.chinamobile.com/business?service=page/business&menuType=2"}
+   click: {xpath:"//span[@id='logoutBtn']",exists:"//span[@id='logoutBtn']"}
+   input: {xpath:"//input[@id='custBillId']",value:"input",wait:1000,reload:true}
+          click :{xpath:"//a[@id='searchCustInfo']",wait:1500}
+	      text: {xpath:"//em[@id='telNum']", name:"电话",wait:3000}
+	      text: {xpath:"//i[@class='nameIcon']/parent::li",name:"姓名",regex:"replace|姓名：",params:""}
+	      text: {xpath:"//i[@class='realName']/parent::span", name:"实名",regex:"replace|实名：",params:""}
+	      text: {xpath:"//span[contains(text(),'套餐：')]", name:"套餐名称",regex:"replace|套餐：",params:""}
+	      text: {xpath:"//span[contains(text(),'网龄：')]", name:"网龄",regex:"replace|网龄：",params:""}
+	      text: {xpath:"//span[contains(text(),'县市：')]", name:"县市",regex:"replace|县市：",params:""}
+	      text: {xpath:"//span[contains(text(),'虚拟网：')]", name:"虚拟网",regex:"replace|虚拟网：",params:""}
+	      text: {xpath:"//span[contains(text(),'亲情网：')]", name:"亲情网",regex:"replace|亲情网：",params:""}
+	      text: {xpath:"//span[contains(text(),'保底预估费')]", name:"保底预估费",regex:"replace|保底预估费:",params:""}
+	      text: {xpath:"//span[contains(text(),'余额：')]", name:"余额",regex:"replace|余额：",params:""}
+	      click:{xpath:"//span[@id='dataUsageInfos']/li/span"}
+	      text: {xpath:"//td[@title='国内数据流量']/following-sibling::td", name:"国内数据流量",handler:"CcscmSource",wait:2000}
+	      text: {xpath:"//td[@title='飞享套餐国内语音' ]/following-sibling::td", name:"飞享套餐国内语音",handler:"CcscmSource"}
+	      text: {xpath:"//td[@title='新飞享语音升级送本地长市话']/following-sibling::td", name:"新飞享语音升级送本地长市话",handler:"CcscmSource"}
+	      text: {xpath:"//tbody[@id='JS_CustOffers5']", name:"是否有成员",handler:"CcscmSource"}
+	      click:{xpath:"//a[@class='aui_close']"}
+	      text: {xpath:"//div[@id='server-label-box' or @id='business-box']",handler:"CcscmTuijian",name:"个性化推荐",wait:500}
+	      text: {name:"业务推荐",handler:"CcscmTuijianBiz"}
+	      text: {name:"4G明星机直降目标",params:"4G明星机直降目标",handler:"CcscmTuijianName"}
+	      text: {name:"近三个月平均移动数据上网流量【月】",params:"近三个月平均移动数据上网流量",handler:"CcscmTuijianName"}
+	      text: {name:"近三个月通话平均时长【月】",params:"近三个月通话平均时长【月】",handler:"CcscmTuijianName"}
+	      text: {name:"出账-近三个月平均收入【月】",params:"出账-近三个月平均收入【月】",handler:"CcscmTuijianName"}
+	      text: {name:"app类别",params:"app类别",handler:"CcscmTuijianName"}
+	      text: {name:"201801易受电信影响用户拍照",params:"201801易受电信影响用户拍照",handler:"CcscmTuijianName"}
+	      text: {name:"201801宽带友商拍照用户",params:"201801宽带友商拍照用户",handler:"CcscmTuijianName"}
+	      click:{xpath:"//span[@id='logoutBtn']",exists:"//span[@id='logoutBtn']"}
+      
+      

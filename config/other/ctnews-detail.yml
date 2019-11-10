@@ -1,0 +1,4 @@
+open: {link:"input",id:"ctnews-detail",name:"ctnews明细",timeout:15,threads:1,major:true,brower:"chrome",monitor:true,remark:"http://permit.mep.gov.cn/permitExt/outside/Publicity?pageno=1&enterName=&province=&city=&treadcode=&treadname=&xkznum="}
+      text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}     
+      text: {spare:"//table/tbody/tr[1]/td/h1",xpath:"//table/tbody/tr[2]/td/h1[contains(@class,'article_title')]",name:"标题"}
+      text: {xpath:"//div[contains(@class,'main_art font_style')]",spare:"//td[@class='bt_content']",name:"内容"}

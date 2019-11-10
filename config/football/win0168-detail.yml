@@ -1,0 +1,6 @@
+open:{id:"win0168-list-url",link:"queues",filter:false,image:false,name:"win0168足球明细",major:true,brower:"chrome",timeout:30,threads:0,remark:""}
+    text:{xpath:"//span[@class='o_t_name'][1]",name:"A",wait:1500}
+    text:{xpath:"//span[@class='o_t_name'][2]",name:"B"}
+    text: {xpath:"//tr[@id='highFObj']/td[10]",name:"凯利指数1"}
+    text: {xpath:"//tr[@id='highFObj']/td[11]",name:"凯利指数2"}
+    text: {xpath:"//tr[@id='highFObj']/td[12]",name:"凯利指数3",handler:"WinDetailText"}

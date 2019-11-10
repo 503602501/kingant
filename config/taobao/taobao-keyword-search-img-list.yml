@@ -1,0 +1,4 @@
+open: {id:"taobao-keyword-search-img-list",name:"淘宝搜索列表主图下载",init:"https://login.taobao.com/member/login.jhtml",image:true,link:"",timeout:30,threads:1,major:true,brower:"chrome",remark:"采集淘宝搜索列表里的普通店铺宝贝（除天猫商品）",help:"功能：淘宝关键词搜索后，采集列表的标题、地区、卖家淘宝名、宝贝链接\n1.关键词放到'采集软件'，点击'启动'，软件打开一个浏览器，自动采集数据\n2.请不要软件控制的浏览器"}
+   page:{xpath:"//li[@class='item next']/a/span[text()='下一页']",focus:true,wait:5000,count:10}
+       list: {xpath:"//div[@class='grid' or @class='items']/div[contains(@class,'item')]",scroll:-1}
+         text: {xpath:"/div/div/div[@class='pic']/a/img",download:true,attribute:"data-src",regex:"prefix|http:",name:"图片地址"}

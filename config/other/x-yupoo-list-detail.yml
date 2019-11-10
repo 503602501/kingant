@@ -1,0 +1,6 @@
+open: {id:"x-yupoo-list-main",filter:false,image:false,name:"Yupoo商品明细图片",link:"queues",major:false,brower:"chrome",timeout:15,threads:0,remark:"http://www.anfua.com/goods/225345347"}
+   text: {xpath:"//div[@class='showalbumheader__gallerydec']/h2",name:"商品名",wait:1000}
+   text: {xpath:"//div[@class='showalbumheader__gallerycover']/img",attribute:"src",name:"主图",regex:"replace|photo",params:"pic"}
+   text: {xpath:"",name:"详情图片",handler:"YupooText"}
+   text: {xpath:"//div[@class='showalbumheader__gallerysubtitle htmlwrap__main']",name:"过滤后尺寸",handler:"YupooSizeText"}
+   text: {xpath:"//div[@class='showalbumheader__gallerysubtitle htmlwrap__main']",name:"原本尺寸"}

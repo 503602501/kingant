@@ -1,0 +1,3 @@
+open: {id:"abbs-list-url",filter:true,image:false,name:"abbs图片",link:"input",major:true,brower:"chrome",timeout:30,rowhandler:"AbbsHandler",threads:1,remark:"http://www.abbs.com.cn/bbs/post/page?bid=52&sty=1"}
+    list: {xpath:"//table[@bgcolor='black']/tbody/tr",include:"odd",scroll:0,wait:1000}
+      text: {xpath:"/td[4]/a",attribute:"href",name:"链接",url:true}

@@ -1,0 +1,5 @@
+open: {id:"soffice-11st-co-kr",name:"店铺管理",link:"",urlhandler:"KrUrl",init:"https://login.soffice.11st.co.kr/login/Login.page",timeout:20,major:true,brower:"chrome",threads:1,remark:""}
+      text: {xpath:"",name:"账号"}
+      text: {xpath:"",name:"留言"}
+      text: {xpath:"",name:"产品数量"}
+      text: {xpath:"",name:"订单数量"}

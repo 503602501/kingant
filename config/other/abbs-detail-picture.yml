@@ -1,0 +1,4 @@
+open: {id:"abbs-list-url",link:"queues",timeout:30,threads:3,brower:"phantomjs"}
+   text: {xpath:"//td[@class='topic']",name:"标题",handler:"AbbsTitle"}
+   list: {xpath:"//img[not(contains(@src,'.gif'))]"}
+     text: {xpath:"",attribute:"src",name:"图片链接",download:true}

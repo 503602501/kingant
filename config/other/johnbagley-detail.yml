@@ -1,0 +1,8 @@
+open: {id:"johnbagley-detail",filter:false,exists:"//ul[@id='small_img_list']/li/a",image:false,name:"johnbagley详情",link:"input",major:true,brower:"chrome",timeout:5,threads:1,remark:"http://www.ilikejade.com/Mobile/Index/info.html?year=0&keyword="}
+       text: {xpath:"",name:"链接",handler:"CommonCurrentUrl"}
+       text: {xpath:"//div[@class='itemno fl']",name:"文件夹名-编号",handler:"JohnBagleyText"}
+       text: {xpath:"//div[@class='briefdesc']",name:"大小重量",attribute:"innerHTML",handler:"JohnBagleyDesc",params:"0"}
+       text: {xpath:"//div[@class='briefdesc']",name:"Accents1",attribute:"innerHTML",handler:"JohnBagleyDesc",params:"1"}
+       text: {xpath:"//div[@class='briefdesc']",name:"Accents2",attribute:"innerHTML",handler:"JohnBagleyDesc",params:"2"}
+       list: {xpath:"//ul[@id='small_img_list']/li/a"}
+         text: {xpath:"",attribute:"onclick",name:"图片链接",handler:"JohnBagleyImage",download:false,show:false}

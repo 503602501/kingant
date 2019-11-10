@@ -1,0 +1,4 @@
+  open: {link:"input",id:"gongzonghao-detail",name:"微信公众号内容",timeout:15,threads:1,major:true,help:"1.关注公众号\n2.登录pc端微信\n3.用fillder获取cookies输入\n4.采集输入为第一页的链接",brower:"chrome",remark:"http://permit.mep.gov.cn/permitExt/outside/Publicity?pageno=1&enterName=&province=&city=&treadcode=&treadname=&xkznum="}
+      text: {xpath:"//h2[@id='activity-name']",name:"标题"}     
+      text: {xpath:"//div[@id='js_content']",name:"内容",wait:2000}
+      

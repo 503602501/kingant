@@ -1,0 +1,5 @@
+open: {id:"lingganjia-url",filter:false,image:false,name:"灵感家链接",scroll:-1,link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:""}
+    text: {xpath:"//a[text()='首页']/following-sibling::font/font/a",spare:"//a[text()='首页']/following-sibling::font/a[2]",name:"文件夹名-分类",wait:1500}
+    text: {xpath:"//div[@id='s1']/h1",name:"文件夹名-朝代"}
+    list: {spare:"//div[@id='s2i']/div/p/a[contains(@href,'htm')]",xpath:"//p/a[contains(@href,'htm') and not(@onclick) ]"}
+       text: {xpath:"",name:"链接",attribute:"href",url:true}

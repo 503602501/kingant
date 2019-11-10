@@ -1,0 +1,5 @@
+open: {id:"ele-shop-picture",name:"饿了么店铺商品图片",link:"input",timeout:15,threads:1,brower:"chrome",remark:"饿了么店铺的商品图片采集：https://www.ele.me/shop/161852455",rowhandler:"MeituanPictureHandler"}
+   text: {name:"文件夹名-店铺名",xpath:"//div[@class='shopguide-info-wrapper']/div[1]/h1"}
+   list: {xpath:"//img[@ng-src]",scroll:-1,wait:2000}
+     text: {xpath:"",name:"图片序号",handler:"AutoIncreaseCode"}
+     text: {xpath:"",name:"图片链接",attribute:"src",regex:"match|(.+?)(?=\\?)",download:true}

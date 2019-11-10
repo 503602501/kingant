@@ -1,0 +1,4 @@
+open: {id:"autohome-car-main",filter:false,image:false,name:"汽车之家品牌",link:"https://www.autohome.com.cn/car/#pvareaid=3311275",major:true,brower:"chrome",timeout:15,threads:1,remark:"https://www.autohome.com.cn/car/#pvareaid=3311275"}
+     list: {xpath:"//h4/a[not(contains(@class,'greylink'))]",scroll:-1}
+        text:{xpath:"",attribute:"href",name:"链接"}
+  

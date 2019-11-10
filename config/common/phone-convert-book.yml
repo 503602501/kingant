@@ -1,0 +1,2 @@
+open: {id:"phone-convert-book",name:"手机号码转换通讯录",link:"input",timeout:15,threads:1,major:true,brower:"phantomjs",urlhandler:"PhoneConvertBook",help:"1.【采集输入】只放需要转换的excel所在的目录路径\n2.软件只识别excel的表头字段：姓名，公司，电话\n3.点击启动，批量导入通讯录的文件默认生成在excel所在的目录下",remark:"通用链接图片采集"}
+   text: {name:"手机号码转换导入通讯录",params:"转换成功"}

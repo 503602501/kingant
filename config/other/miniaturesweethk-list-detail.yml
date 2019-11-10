@@ -1,0 +1,6 @@
+open: {id:"miniaturesweethk-list-detail",exists:"//div[@class='owl-stage']/div/li/a|//h1[@itemprop='name']",filter:false,image:false,name:"miniaturesweethk商品明细",link:"input",major:true,brower:"chrome",expire:"{date:'20191015',message:'运行异常'}",timeout:5,threads:1,remark:"https://www.miniaturesweethk.com/products/assorted-sphere-silicone-mold-round-ball-mold-assortment-clear-mold-for-uv-resin-epoxy-resin-art-supplies"}
+   text: {xpath:"//h1[@itemprop='name']",name:"文件夹名-商品名称"}
+   text: {xpath:"//div[@class='detail-price']",name:"价格"}
+   text: {xpath:"//div[@class='tab-content']",name:"更多信息"}
+   list:{xpath:"//div[@class='owl-stage']/div/li/a"}
+       text: {xpath:"",attribute:"data-zoom-image",name:"图片链接",download:true,regex:"prefix|https:",show:false}

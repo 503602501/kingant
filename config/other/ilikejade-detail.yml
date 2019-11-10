@@ -1,0 +1,5 @@
+open: {id:"ilikejade-detail",filter:false,image:false,name:"石器详情",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.ilikejade.com/Mobile/Index/info.html?year=0&keyword="}
+     text: {xpath:"//div[@id='about_guyu_hammer']/div[1]",name:"标题",wait:1500}
+     text: {xpath:"//div[@id='about_guyu_hammer']/div[@class='info_wrap']",name:"内容",handler:"IlikeText"}
+     text: {xpath:"",name:"图片名称",handler:"AutoCode",filename:true}
+     text: {xpath:"//div[@class='carousel-inner']/div/img",name:"图片链接",regex:"prefix|http://www.ilikejade.com",attribute:"src",download:true}

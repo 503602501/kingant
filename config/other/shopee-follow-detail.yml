@@ -1,0 +1,3 @@
+open: {id:"shopee-follow-detail",init:"https://seller.shopee.ph/",filter:false,image:true,name:"虾皮店铺买家链接-关注",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://seller.shopee.ph/portal/sale"}
+    click:{xpath:"//div[@class='section-seller-overview-horizontal__button']"}
+    text:{xpath:"",name:"关注",params:"关注",wait:100}

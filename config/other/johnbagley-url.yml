@@ -1,0 +1,3 @@
+open: {id:"johnbagley-url",filter:false,image:true,name:"johnbagley链接",scroll:-1,link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.ilikejade.com/Mobile/Index/info.html?year=0&keyword="}
+    list: {xpath:"//div[@class='product_list clearfix']/a"}
+       text: {xpath:"",name:"链接",attribute:"href"}

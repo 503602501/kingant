@@ -1,0 +1,4 @@
+open: {id:"taobao-shop-url-catalog-list",image:true,name:"淘宝店铺分类商品链接",link:"input",init:"https://login.taobao.com/member/login.jhtml",timeout:30,threads:1,major:true,brower:"chrome",remark:"https://shop150648714.taobao.com/;淘宝店铺的所有商品信息"}
+    page:{xpath:"//a[not(contains(@class,'disable'))][text()='下一页']",wait:5000}
+       list: {xpath:"//a[contains(@class,'item-name')]",scroll:-1}
+         text: {xpath:"",attribute:"href",name:"链接",show:true}

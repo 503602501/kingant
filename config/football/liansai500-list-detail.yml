@@ -1,0 +1,16 @@
+open: {id:"liansai500-list-detail",filter:false,image:true,name:"500彩票欧赔",link:"input",major:true,brower:"chrome",timeout:20,threads:1,remark:"http://odds.500.com/fenxi/shuju-730955.shtml"}
+    text: {xpath:"//div[@class='odds_hd_cont']/table/tbody/tr/td[1]/ul/li[1]",name:"A队"}
+    text: {xpath:"//div[@class='odds_hd_cont']/table/tbody/tr/td[5]/ul/li[1]",name:"B队"}
+    list:{xpath:"//table[@id='datatb']/tbody/tr",scorll:-1}
+        text: {xpath:"/td[2]",name:"赔率公司"}
+        text: {xpath:"/td[3]",name:"即时欧赔胜"}
+        text: {xpath:"/td[4]",name:"即时欧赔平"}
+        text: {xpath:"/td[5]",name:"即时欧赔负"}
+        text: {xpath:"/td[6]",name:"即时概率胜"}
+        text: {xpath:"/td[7]",name:"即时概率平"}
+        text: {xpath:"/td[8]",name:"即时概率负"}
+        text: {xpath:"/td[9]",name:"返还率"}
+        text: {xpath:"/td[10]",name:"即时凯利胜"}
+        text: {xpath:"/td[11]",name:"即时凯利平"}
+        text: {xpath:"/td[12]",name:"即时凯利负"}
+         

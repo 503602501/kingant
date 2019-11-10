@@ -1,0 +1,8 @@
+open: {id:"chemicalbook-detail.yml",filter:false,image:true,name:"chemicalbook明细",init:"https://www.chemicalbook.com/UserManager/Login.aspx?redirect=/UserProfile/companyinfoManage.aspx&AcceptsCookies=yes",link:"input",major:true,brower:"chrome",timeout:30,threads:1,remark:"https://www.chemicalbook.com/ProdSupplierGN.aspx?CBNumber=CB3169203&ProvID=1000&start=1"}
+       text: {xpath:"//td[text()='CAS号:']/following-sibling::td",name:"CAS号"}
+       text: {xpath:"//td[text()='中文名称:']/following-sibling::td",name:"中文名称"}
+       page: {xpath:"//b/font/parent::b/following-sibling::a"}
+         list: {xpath:"//div[@id='ContentPlaceHolder1_ProductSupplier']/table[contains(@class,'ProdGN')]",wait:1000}
+           text: {xpath:"/tbody/tr/td[text()='公司名称：']/following-sibling::td/a",name:"公司名称"}
+           text: {xpath:"/tbody/tr/td[text()='联系电话：']/following-sibling::td",name:"联系电话"}
+           text: {xpath:"/tbody/tr/td[text()='网址：']/following-sibling::td",name:"网址"}

@@ -1,0 +1,6 @@
+open: {id:"subsidesports-list-url",link:"queues",filter:false,expire:"{date:'20190415',message:'运行异常'}",image:true,name:"subsidesports图片下载",brower:"chrome",timeout:30,threads:0,remark:"https://www.subsidesports.com/uk/07-08-ac-milan-away-3rd-nesta-13-official-name-and-number"}
+       text:{xpath:"//div[@class='breadcrumbs']/ul/li[last()-2]/a",name:"文件夹名-商品名称1"}
+       text:{xpath:"//div[@class='breadcrumbs']/ul/li[last()-1]/a",name:"文件夹名-商品名称2"}
+       text:{xpath:"//div[@class='breadcrumbs']/ul/li[last()]",name:"文件夹名-商品名称3"}
+       list:{xpath:"//div[@class='owl-item']/div/a",spare:"//p[@class='product-image zoom-inside']/div/a"}
+          text:{xpath:"",attribute:"href",name:"图片地址",download:true}

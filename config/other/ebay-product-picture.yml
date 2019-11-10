@@ -1,0 +1,4 @@
+open: {id:"ebay-product-picture",name:"ebay商品橱柜图片",link:"input",timeout:15,threads:1,brower:"chrome",remark:"ebay单品的橱柜图片采集"}
+   text: {xpath:"//h1[@id='itemTitle']",name:"文件夹名-商品名"}
+   list: {xpath:"//td[@class='tdThumb']/div/img",wait:5000}
+     text: {xpath:"",attribute:"src",name:"图片链接",regex:"replace|s-l64.jpg",params:"s-l1600.jpg",download:true,show:true}

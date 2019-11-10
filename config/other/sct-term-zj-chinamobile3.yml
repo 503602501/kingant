@@ -1,0 +1,23 @@
+open: {id:"sct-term-zj-chinamobile3",image:true,name:"杭州终端平台",link:"http://term.chnl.zj.chinamobile.com/business?service=page/singleSales&_pid=4&_cid=7&_tid=2",major:true,init:"http://term.chnl.zj.chinamobile.com/business?service=page/singleSales&_pid=4&_cid=7&_tid=2",timeout:15,threads:1,brower:"chrome",remark:"http://term.chnl.zj.chinamobile.com/; http://sct.term.zj.chinamobile.com/business?service=page/singleSales&_pid=4&_cid=7&_tid=2"}
+   input: {xpath:"//input[@id='enterTelTxt']",value:"input",wait:1000}
+      text: {xpath:"//input[@id='enterTelTxt']",attribute:"value", name:"电话",wait:2000}
+      text: {xpath:"//h3[contains(text(),'4G飞悦套餐')]",name:"4G飞悦套餐开始时间",handler:"FilterChinamobileStartTime"}
+      text: {xpath:"//h3[text()='4G飞悦套餐']/following-sibling::p",name:"4G飞悦套餐时间",handler:"TermChinamobile"}
+      text: {xpath:"//h3[text()='4G飞享套餐']/following-sibling::p",name:"4G飞享套餐时间",handler:"TermChinamobile"}
+      text: {xpath:"//h3[contains(text(),'升飞悦')]",name:"升飞悦",handler:"FilterChinamobile"}
+      text: {xpath:"//h3[contains(text(),'升飞悦')]",name:"升飞悦开始时间",handler:"FilterChinamobileStartTime"}
+      text: {xpath:"//h3[contains(text(),'升飞悦')]",name:"升飞悦时间",handler:"FilterChinamobileTime"}
+      text: {xpath:"//h3[contains(text(),'升飞享')]",name:"升飞享",handler:"FilterChinamobile"}
+      text: {xpath:"//h3[contains(text(),'升飞享')]",name:"升飞享开始时间",handler:"FilterChinamobileStartTime"}
+      text: {xpath:"//h3[contains(text(),'升飞享')]",name:"升飞享时间",handler:"FilterChinamobileTime"}
+      
+      
+      
+      
+      text: {xpath:"//h3[contains(text(),'合约计划-保底')]",name:"合约计划-保底",handler:"FilterChinamobile"}
+      text: {xpath:"//h3[contains(text(),'合约计划-保底')]",name:"合约计划-保底时间",handler:"FilterChinamobileTime"}
+      text: {xpath:"//h3[contains(text(),'政企')]",name:"政企",handler:"FilterChinamobile"}
+      text: {xpath:"//h3[contains(text(),'政企')]",name:"政企时间",handler:"FilterChinamobileTime"}
+      
+      
+      

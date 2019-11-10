@@ -1,0 +1,10 @@
+*.jar
+/tmp
+/chrome
+/chrome/tmp/
+/target
+.settings/
+/log/*
+.classpath
+*.log
+.project

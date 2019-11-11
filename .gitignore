@@ -1,6 +1,5 @@
-*.jar
+
 /tmp
-/chrome
 /chrome/tmp/
 /target
 .settings/

@@ -1,4 +1,4 @@
-*.jar
+
 /tmp
 /chrome
 /chrome/tmp/
@@ -8,3 +8,4 @@
 .classpath
 *.log
 .project
+.gitignore.bak

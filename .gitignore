@@ -8,3 +8,4 @@
 .classpath
 *.log
 .project
+.gitignore.bak

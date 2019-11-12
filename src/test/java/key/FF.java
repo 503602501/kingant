@@ -9,7 +9,7 @@ public class FF {
 	    }
 		
 		static{
-			System.out.println("我是父类-------static代码块");
+			System.out.println("我是父类---  ----static代码块");
 		}
 	    
 	    

@@ -1,0 +1,3 @@
+open: {id:"allegro-pl-list",exists:"//h2/a[@title='']",filter:false,image:false,name:"波兰店铺链接",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://allegro.pl/uzytkownik/NOVUS_WATCH_12?bmatch=baseline-cl-dict42-uni-1-1-1024"}
+    list: {xpath:"//h2/a[@title='']",wait:3000,scroll:-1}
+       text: {xpath:"",attribute:"href",name:"链接"}

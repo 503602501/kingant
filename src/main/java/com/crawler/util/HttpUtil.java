@@ -35,7 +35,9 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -145,9 +147,9 @@ public class HttpUtil {
 
 		// 设置Get请求头的 User-Agent (模拟代理浏览器信息)
 		httpGet.setHeader( "User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36");
-//		httpGet.setHeader( "referer", "https://www.amazon.de/Firsthgus-Wandleuchte-Nachttischlampe-schlafzimmer-wandleuchte/dp/B07TG1GVJT/ref=sr_1_39?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=Wandleuchte&qid=1562147619&refinements=p_n_availability%3A225433031&rnid=225431031&s=lighting&sr=1-39");
 		httpGet.setHeader("Cookie",cookies);
- 
+//		httpGet.setHeader("Host","www.youlu.net");
+//		httpGet.setHeader( "referer", "https://www.youlu.net/247689");
 //		httpGet.setHeader("Version-Code","1");
 		
 	/*	httpGet.setHeader("sdk-version","1");
@@ -490,9 +492,32 @@ public class HttpUtil {
 	 */ 
 	public static void main(String[] args) throws Exception {
 		
+	 	String contents= HttpUtil.getHtmlContent( "https://www.youlu.net/search/result3/?isbn=9787806026007&publisherName=&author=&bookName=");
+		String s = FilterUtil.cutString(contents, "bookId=", "target");
+		s = s.replace("\"", "").trim();
+		String url = String.format("https://www.youlu.net/info3/shp.aspx?bookId=%s&rowCount=0&pageIndex=1", s) ;
+		System.out.println(url);
+//		url = "https://www.youlu.net/info3/shp.aspx?bookId=247689&rowCount=0&pageIndex=1";
+//https://www.youlu.net/info3/shp.aspx?bookId=247689&rowCount=0&pageIndex=1 
+		String data = HttpUtil.getHtmlContent(url,"UserProvinceCode=440000; UserProvinceName=%25E5%25B9%25BF%25E4%25B8%259C%25E7%259C%2581; CokVisitorId=20200211215324657_223.73.114.37; CokBrowserId=26a6cfff-0ff4-41ec-b2de-21d373e9d376; CokMemberNickname=; YLFirstSign=1; CokShpBuyer=20200211215325830_223.73.114.37; tencentSig=6495048704; CokUserArea=%7b%22ip%22%3a%22223.73.114.34%22%2c%22pro%22%3a%22%e5%b9%bf%e4%b8%9c%e7%9c%81%22%2c%22proCode%22%3a%22440000%22%2c%22city%22%3a%22%e5%b9%bf%e5%b7%9e%e5%b8%82%22%2c%22cityCode%22%3a%22440100%22%2c%22region%22%3a%22%22%2c%22regionCode%22%3a%220%22%2c%22addr%22%3a%22%e5%b9%bf%e4%b8%9c%e7%9c%81%e5%b9%bf%e5%b7%9e%e5%b8%82+%e7%a7%bb%e9%80%9a%22%2c%22regionNames%22%3a%22%22%2c%22err%22%3a%22%22%7d; Qs_lvt_103052=1581429243%2C1581476405; ASP.NET_SessionId=ofqqzhflsxjbu4s0d24snnrn; CokRecentViewBookList=9787806026007%3b0%3b%e6%ba%aa%e5%8f%a3%e5%a2%a8%e5%ae%9d%2f%e6%ba%aa%e5%8f%a3%e6%97%85%e6%b8%b8%e4%b8%9b%e4%b9%a6%3b%e7%8e%8b%e5%a4%a9%e8%8b%8d%3b247689%7c9787550015432%3b0%3b%e8%90%a4%e7%81%ab%e8%99%ab%e5%b0%8f%e5%b7%b7%3b%e5%85%8b%e8%8e%89%e4%b8%9d%e6%b1%80.%e6%b1%89%e5%a8%9c%3b3705013; Qs_pv_103052=358011691043138700%2C3081709735049110000%2C2525753221300187600%2C2742261762381516300%2C1208289355533555200; Hm_lvt_e9008369bc2cfc746263d552935f0791=1581431399,1581476408; Hm_lpvt_e9008369bc2cfc746263d552935f0791=1581482109; Hm_lvt_6ecaa2d1d7c184a6b549be11a906cbde=1581429244,1581476407; Hm_lpvt_6ecaa2d1d7c184a6b549be11a906cbde=1581482109; Hm_lvt_a126719936bc8fc47fd2c2d2ca323ae7=1581429244,1581476407; Hm_lpvt_a126719936bc8fc47fd2c2d2ca323ae7=1581482109; Hm_lvt_5bb1bd5b2b32959372056d2505ec36e1=1581429247,1581476409; Hm_lpvt_5bb1bd5b2b32959372056d2505ec36e1=1581482109; _qddaz=QD.n18g70.qf9rbd.k6hy54dv; mediav=%7B%22eid%22%3A%2275240%22%2C%22ep%22%3A%22%22%2C%22vid%22%3A%227Wn%2Fx9DSh%3F%3AU%234K)x9'%5B%22%2C%22ctn%22%3A%22%22%7D; ShopSortType=price; _qdda=3-1.1; _qddab=3-cyxjqu.k6iz96fi");
+//		System.out.println("价格后的排序:"+data);
 		
-		String contents= HttpUtil.getHtmlContent( "https://www.aliexpress.com/item/32829415004.html");
-		System.out.println(contents);
+		String ss = StringEscapeUtils.unescapeHtml4(data) ;
+		ss = ss.substring(12,ss.length()-2) ;
+		
+		Document doc = Jsoup.parse(ss);
+		
+		Elements eles = Xsoup.select(doc, "//body/li").getElements();
+		for (int i = 1; i <= eles.size(); i++) {
+			 String shopName = Xsoup.select(doc, "//body/li["+i+"]/div/div[@class='yl-seller-name']/a/text()").get();
+			 String price = Xsoup.select(doc, "//body/li["+i+"]/div/div[@class='price']/span/em/text()").get();
+			 String num = Xsoup.select(doc, "//body/li["+i+"]/div/span[@class='yl-seller-store']/text()").get();
+			 System.out.println(shopName+"|"+price+"|"+num);
+			 
+		}
+		
+		
+		
 		/*
 		String contents= HttpUtil.getHtmlContent("https://www.toutiao.com/i6737980139885298187");
 		contents = contents.substring(contents.indexOf("BASE_DATA.galleryInfo ="));

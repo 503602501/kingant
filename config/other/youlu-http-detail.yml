@@ -1,0 +1,3 @@
+open: {id:"youlu-http-detail",labels:"延迟（秒）",init:"https://www.youlu.net",filter:false,urlhandler:"YouluHttp",image:false,name:"有路网入驻店铺价格排序",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.youlu.net/247689"}
+       text: {xpath:"",name:"ISBN"}
+       text: {xpath:"",name:"店铺信息"}

@@ -1,0 +1,5 @@
+open: {id:"allegro-pl-detail",filter:false,image:false,name:"波兰详情",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/359880396.html"}
+       text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}
+       text:{xpath:"//h1",name:"标题"}
+       text: {xpath:"",name:"价格",handler:"AllegroPriceText"}
+       text: {xpath:"//div[@role='button']",name:"图片链接",handler:"AllegroText"}

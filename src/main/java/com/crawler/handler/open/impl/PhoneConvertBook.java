@@ -95,8 +95,8 @@ public class PhoneConvertBook implements IOpen {
 			org=org.trim().replaceAll("\r|\n", "");
 			name=name.trim().replaceAll("\r|\n", "");
 //			sb.append( new Vcard(name+"-"+( (int)(Math.random()*1000)  ), org, mobile).toString());
-			sb.append( new Vcard("25-"+name+"-" +NumberUtil.autoNumber() , org, mobile).toString());
-//			sb.append( new Vcard("2"+name, org, mobile).toString());
+//			sb.append( new Vcard("25-"+name+"-" +NumberUtil.autoNumber() , org, mobile).toString());
+			sb.append( new Vcard(name, org, mobile).toString());
 //			sb.append( new Vcard("天玺湾"+name , org, mobile).toString());
 		}
 		

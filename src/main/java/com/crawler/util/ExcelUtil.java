@@ -296,6 +296,7 @@ public class ExcelUtil {
 			if(storeData.getList().size()==0){
 				continue;
 			}
+			System.out.println("excel读取的总行:"+storeData.getList().size());
 			storeDatas.add(storeData);
 		}
 		
@@ -524,7 +525,7 @@ public class ExcelUtil {
 		XSSFWorkbook xwb = new XSSFWorkbook(fis);
 		List<String> headerLabels = new ArrayList<>(); //表头
 		// 读取第一章表格内容
-		XSSFSheet sheet = xwb.getSheetAt(0);
+		XSSFSheet sheet = xwb.getSheetAt(1);
 		String value = null;
 		XSSFRow row = null;
 		XSSFCell cell = null;

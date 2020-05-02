@@ -45,7 +45,7 @@ public class PageUnit  extends UnitAdapter{
 		}
 		
 		//分页到了最后一页，退出
-		if( this.getCount()!=null && storage.getPageCount()==0){  
+		if( (this.getCount()!=null && storage.getPageCount()==0) || (storage.getPageCount()!=null && storage.getPageCount()<=0)){  
 			return ; 
 		}
 		
@@ -74,6 +74,7 @@ public class PageUnit  extends UnitAdapter{
 			}
     	}
     	
+    	 
     	/***********************/
 		for (Unit  unit: getChildUnit()) {
 			UnitAdapter adapter = (UnitAdapter) unit;

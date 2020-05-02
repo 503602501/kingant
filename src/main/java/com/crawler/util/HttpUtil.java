@@ -17,7 +17,6 @@ import java.util.regex.Pattern;
 import javax.net.ssl.SSLContext;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
@@ -32,12 +31,12 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.ssl.SSLContexts;
+import org.apache.http.ssl.TrustStrategy;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
-import org.jsoup.select.Elements;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -61,8 +60,8 @@ public class HttpUtil {
 	private static SSLContext sslContext ;
 	static{
 		
-/*	 	*//*******第一种https验证******//*
-		 try {
+	 	//*******第一种https验证******//*
+/*		 try {
 			 sslContext = SSLContexts.custom().loadTrustMaterial(null, new TrustStrategy() {
 
 				@Override
@@ -492,8 +491,12 @@ public class HttpUtil {
 	 */ 
 	public static void main(String[] args) throws Exception {
 		
-	 	String contents= HttpUtil.getHtmlContent( "https://www.youlu.net/search/result3/?isbn=9787806026007&publisherName=&author=&bookName=");
-		String s = FilterUtil.cutString(contents, "bookId=", "target");
+	 	String contents= HttpUtil.getHtmlContent( "https://www.carid.com/weathertech/digitalfit-molded-floor-liners-1st-row-tan-mpn-458391.html");
+	 	System.out.println(contents);
+	 	if(contents!=null){
+	 		return ;
+	 	}
+	/*	String s = FilterUtil.cutString(contents, "bookId=", "target");
 		s = s.replace("\"", "").trim();
 		String url = String.format("https://www.youlu.net/info3/shp.aspx?bookId=%s&rowCount=0&pageIndex=1", s) ;
 		System.out.println(url);
@@ -515,7 +518,7 @@ public class HttpUtil {
 			 System.out.println(shopName+"|"+price+"|"+num);
 			 
 		}
-		
+		*/
 		
 		
 		/*

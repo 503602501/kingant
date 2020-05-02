@@ -1,3 +1,4 @@
 open: {id:"aliexpress-shop-url",name:"速卖通整店铺链接",image:true,link:"input",timeout:15,threads:1,brower:"chrome",remark:"https://baseus.aliexpress.com/store/group/Wireless-charger/2343184_511590492.html?spm=2114.12010612.0.0.3d3a75509kAjWS"}
-    list: {xpath:"//a[@class='pic-rind' or @class='page-next ui-pagination-next']",wait:10000}
-      text: {xpath:"",attribute:"href", name:"链接"}
+    page:{xpath:"//a[@class='ui-pagination-next']",wait:10000}
+      list: {xpath:"//a[@class='pic-rind' or @class='page-next ui-pagination-next']",wait:5000}
+        text: {xpath:"",attribute:"href", name:"链接"}

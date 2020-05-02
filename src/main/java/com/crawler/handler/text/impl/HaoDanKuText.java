@@ -1,0 +1,21 @@
+package com.crawler.handler.text.impl;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.crawler.entity.Storage;
+import com.crawler.entity.TextUnit;
+import com.crawler.handler.text.IText;
+import com.crawler.util.FilterUtil;
+
+public class HaoDanKuText implements IText {
+
+	 
+	@Override
+	public String getText(String text,WebElement web,WebDriver webDriver,TextUnit textUnit,Storage storage) {
+		
+		String s = FilterUtil.cutString(text, "下单：", "<br>");
+		return s ;
+	}
+
+}

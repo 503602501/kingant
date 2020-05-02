@@ -1,0 +1,30 @@
+open: {id:"qimai-list",filter:false,image:false,name:"七麦数据详情",link:"queues",major:true,brower:"chrome",timeout:10,threads:0,remark:"https://www.qimai.cn/"}
+       click: {xpath:"//a[contains(text(),'应用信息')]",wait:3000}
+       text : {xpath:"//div[@id='appMain']/div[1]/ul/li/a",name:"公司",wait:5000}
+       text : {xpath:"//div[@id='appMain']/div[1]/ul/li[last()]",name:"应用"}
+       text : {xpath:"//div[@class='price']/div[2]",name:"价格"}
+       text : {xpath:"//div[@class='description']",name:"应用描述"}
+       text : {xpath:"//p[text()='开发者']/following-sibling::p",name:"开发者"}
+       text : {xpath:"//p[text()='发布日期']/following-sibling::p",name:"发布日期"}
+       text : {xpath:"//p[text()='更新日期']/following-sibling::p",name:"更新日期"}
+       text : {xpath:"//p[text()='版本']/following-sibling::p",name:"版本"}
+       text : {xpath:"//p[text()='大小']/following-sibling::p",name:"大小"}
+       text : {xpath:"//p[text()='是否支持 Watch']/following-sibling::p",name:"是否支持 Watch"}
+       text : {xpath:"//p[text()='兼容性']/following-sibling::p",name:"兼容性"}
+       text : {xpath:"//p[text()='支持语言']/following-sibling::p",name:"支持语言"}
+       text : {xpath:"//p[text()='发行国家/地区']/following-sibling::p",name:"发行国家/地区"}
+       text : {xpath:"//p[text()='内容评级']/following-sibling::p",name:"内容评级"}
+	   click: {xpath:"//a[contains(text(),'版本记录')]"}
+       text : {xpath:"//p[text()='近1年版本更新次数']/following-sibling::p",name:"近1年版本更新次数",wait:3000}
+       text : {xpath:"//p[contains(text(),'全球最早版本上线日期')]/following-sibling::p",name:"全球最早版本上线日期"}
+       click: {xpath:"//a[contains(text(),'评分评论')]"}
+       text : {xpath:"//div[@class='score-star']/p[@class='num']",name:"当前平分",wait:3000}
+       text : {xpath:"//p[@class='comment-num-item']",name:"总评分个数"}
+       text : {xpath:"//p[text()='5星']/following-sibling::p",name:"5星"}
+       text : {xpath:"//p[text()='4星']/following-sibling::p",name:"4星"}
+       text : {xpath:"//p[text()='3星']/following-sibling::p",name:"3星"}
+       text : {xpath:"//p[text()='2星']/following-sibling::p",name:"2星"}
+       text : {xpath:"//p[text()='1星']/following-sibling::p",name:"1星"}
+       click: {xpath:"//a[contains(text(),'苹果推荐记录')]"}
+       text : {xpath:"//p[@class='featured-info']/span",name:"苹果推荐次数",wait:3000}
+       

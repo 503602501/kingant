@@ -121,6 +121,9 @@ public class InputUnit extends UnitAdapter {
 					  
 					  for (Unit  unit: super.getChildUnit()) {
 						  UnitAdapter adapter = (UnitAdapter) unit;
+						  if(adapter instanceof PageUnit  && storage.getPageCount()!=null &&  storage.getPageCount()<=0){ 
+							  storage.setPageCount(adapter.getCount() );
+						  }
 						  adapter.adapterHandler(webDriver,unit.getXpath(),storage); 
 					  }
 					}catch(UnreachableBrowserException ub){

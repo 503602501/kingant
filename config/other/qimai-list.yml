@@ -1,0 +1,3 @@
+open: {id:"qimai-list",filter:false,image:true,name:"七麦数据",init:"https://www.qimai.cn/rank/index/brand/grossing/device/iphone/country/cn",link:"",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.qimai.cn/"}
+    list: {xpath:"//table[@class='data-table']/tbody/tr[not(@style)]",scroll:15}
+       text: {xpath:"/td[2]/div/a",attribute:"href",name:"链接",url:true}

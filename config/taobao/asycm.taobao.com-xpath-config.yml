@@ -1,0 +1,13 @@
+open: {id:"asycm.taobao.com-xpath-config",image:true,sort:true,exportall:true,expire:"{date:'20210720',message:'运行异常'}",name:"生意参谋单条数据",init:"https://sycm.taobao.com/custom/login.htm?_target=http://sycm.taobao.com/",link:"https://sycm.taobao.com/mc/mq/search_analyze?activeKey=relation&dateType=recent7&device=0&keyword=1",brower:"chrome",timeout:30,threads:1,major:true}
+   click: {xpath:"//span[text()='搜索热度']/parent::span/span[1]",wait:1500}
+   click: {xpath:"//span[text()='点击率']/parent::span/span[1]",wait:500}
+   click: {xpath:"//span[text()='在线商品数']/parent::span/span[1]",wait:500}
+   click: {xpath:"//span[text()='直通车参考价']/parent::span/span[1]",wait:500}
+   input: {xpath:"//input[@class='ant-input']",value:"input",keydown:true,script:"window.scrollTo(0,0);"}
+      page:{xpath:"//li[@aria-disabled='false' and @title='下一页']/a",count:5,wait:3000}
+	      text: {xpath:"//input[@class='ant-input']",attribute:"value",name:"搜索关键词",global:true}
+	      list: {xpath:"//div[@class='ant-table-body']/table/tbody/tr"}
+	            text: {xpath:"/td[1]",name:"相关搜索词",handler:"SycmKeyText"}
+	            text: {xpath:"/td[2]",name:"搜索人气",handler:"SycmLineText"}
+	            text: {xpath:"/td[5]",name:"在线商品数",handler:"SycmLineText"}
+	            text: {xpath:"/td[6]",name:"直通车参考价",handler:"SycmLineText"}

@@ -280,7 +280,7 @@ public class OpenUnit  extends Unit{
 			}catch (Exception e) {
 				e.printStackTrace();
 				storage.addErrorList((isMajor()?"主":"子")+"链接："+url);
-				logger.error("主线程运行页面处理异常:"+url+"|"+e.getMessage());
+				logger.error("主线程运行页面处理异常:",e);
 			}
 			storage.clearPageCount();
 			

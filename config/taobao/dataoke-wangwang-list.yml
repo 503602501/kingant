@@ -1,0 +1,3 @@
+open: {id:"dataoke-wangwang-list",name:"大淘客旺旺",init:"http://www.dataoke.com/qlist/?px=zh&page=2",link:"input",expire:"{date:'20210720',message:'运行异常'}",timeout:15,threads:1,major:true,brower:"chrome",monitor:true,remark:"大淘客：http://www.dataoke.com/qlist/?px=zh&page=4"}
+  list: {xpath:"//div[@class='goods-list clearfix']/div"}
+    text: {xpath:"/div[1]/div[@class='goods-info']/div[@class='type']/span[@class='margin-num qlist-shop']",handler:"DelHTMLTagHandler",attribute:"innerHTML",name:"店铺名称11"}

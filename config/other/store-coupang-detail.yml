@@ -3,4 +3,5 @@ open: {id:"store-coupang-detail",filter:false,image:false,name:"store.coupang详
        text: {xpath:"//span[@class='total-price']/strong",name:"价格"}
        text: {xpath:"//img[@class='prod-image__detail']",attribute:"data-zoom-image-url",name:"主图链接",regex:"prefix|http:"}
        text: {xpath:"",name:"颜色",handler:"CoupangColorText"}
+       text: {xpath:"",name:"尺码",handler:"CoupangSizeText"}
        text: {xpath:"",name:"详情链接",handler:"CoupangDetailText"}

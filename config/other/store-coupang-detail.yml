@@ -5,3 +5,4 @@ open: {id:"store-coupang-detail",filter:false,image:false,name:"store.coupang详
        text: {xpath:"",name:"颜色",handler:"CoupangColorText"}
        text: {xpath:"",name:"尺码",handler:"CoupangSizeText"}
        text: {xpath:"",name:"详情链接",handler:"CoupangDetailText"}
+       text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}

@@ -10,11 +10,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
+
+import bsh.StringUtil;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 
 /*
  * 目录管理工具
@@ -224,9 +231,19 @@ public class FolderUtil {
 	}
     
     public static void main(String[] args) {
-     
-    	String s= filterFolderName("LOEWE 罗意威 男包 女包 钱包 手拿包 相册批发工厂【品牌导航-客服QQ:103993888-广州一手货源厂家直销】");
+    	String s = readFileContent(new File("test.json"));
+    	s =FilterUtil.cutString(s, "GmktItem.OptionParamCoreAbove.combOptionObj = ", "CombinationalOptionData3" );
+    	s = s.substring(0, s.length()-2)+"}";
+    	
     	System.out.println(s);
+    	JSONArray array = JsonUtil.getJSONArray("CombinationalOptionData2->OptionValues", s);
+    	Set<String> set = new HashSet();
+    	for (Object object : array) {
+    		JSONObject json = (JSONObject) object ;
+    		set.add(json.get("OptionValue1")+"");
+		}
+    	
+     System.out.println( org.apache.commons.lang3.StringUtils.join(set,","));
     	
     }
 

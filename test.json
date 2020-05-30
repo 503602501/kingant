@@ -1,0 +1,87 @@
+
+    (function(GmktItem, $){
+        GmktItem.OrderSetList = GmktItem.OrderSetList || [];
+        GmktItem.OrderSetKeyList = GmktItem.OrderSetKeyList || [];
+        GmktItem.OrderLimitCntGroup = GmktItem.OrderLimitCntGroup || {};
+        GmktItem.OrderSetIndex = GmktItem.OrderSetIndex || 0;
+
+        GmktItem.OptionParamCoreAbove = {
+            optOrderSelCnt: 0,
+            combOptionDepth: 2,
+            txtOrderSelCnt: 0,
+            selectedListId: "#coreSelectedList",
+            selOptPrefix: "#optOrderSel",
+            combOptPrefix: "#optOrderComb",
+            txtOptPrefix:"#optOrderTxt",
+            calcOptPrefix:"#optOrderTxtCalc",
+            plusOptPrefix: "#optOrderPlus"
+        };
+
+            
+        GmktItem.OptionParamCoreAbove.combOptionObj = {"OptionDepth":2,"IsSelectCountUsable":false,"CombinationalOptionData1":{"OptionName":"색상","OptionLayerType":1,"OptionValues":[{"OptionValue2":null,"OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539746,"OptionValue1":"검정","OptionPrice":0.0,"InventoryCount":null,"OptionStatus":false,"VersionChangeDate":null},{"OptionValue2":null,"OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539755,"OptionValue1":"그레이","OptionPrice":0.0,"InventoryCount":null,"OptionStatus":false,"VersionChangeDate":null}]},"CombinationalOptionData2":{"OptionName":"사이즈","OptionLayerType":1,"OptionValues":[{"OptionValue2":"M","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539746,"OptionValue1":"검정","OptionPrice":0.0000,"InventoryCount":"82","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"L","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539763,"OptionValue1":"검정","OptionPrice":0.0000,"InventoryCount":"64","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539780,"OptionValue1":"검정","OptionPrice":0.0000,"InventoryCount":"85","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"2XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539800,"OptionValue1":"검정","OptionPrice":0.0000,"InventoryCount":"88","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"3XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539818,"OptionValue1":"검정","OptionPrice":0.0000,"InventoryCount":"81","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"4XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539834,"OptionValue1":"검정","OptionPrice":0.0000,"InventoryCount":"89","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"M","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539755,"OptionValue1":"그레이","OptionPrice":0.0000,"InventoryCount":"95","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"L","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539771,"OptionValue1":"그레이","OptionPrice":0.0000,"InventoryCount":"92","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539787,"OptionValue1":"그레이","OptionPrice":0.0000,"InventoryCount":"95","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"2XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539809,"OptionValue1":"그레이","OptionPrice":0.0000,"InventoryCount":"96","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"3XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539827,"OptionValue1":"그레이","OptionPrice":0.0000,"InventoryCount":"97","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"},{"OptionValue2":"4XL","OptionValue3":null,"MatchingImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","MouseOverImageUrl":"http://image.gmarket.co.kr/detailview/Item/no_img.gif","OptionNo":30996539841,"OptionValue1":"그레이","OptionPrice":0.0000,"InventoryCount":"97","OptionStatus":true,"VersionChangeDate":"2019-08-01 18:02:15"}]},"CombinationalOptionData3":null}
+            
+
+    	GmktItem.OrderLimitCntGroup['1650687264'] = {OrderLimitCnt : -1, OrderPossibleCnt : -1};
+
+        GmktItem.OrderSet = GmktItem.OrderSet || {};
+        var OrderSet = GmktItem.OrderSet;
+
+		OrderSet.BaseDiscountPrice = 22150;
+        OrderSet.SellPrice = 23000.0000;
+        OrderSet.IsCouponAvailable = true;
+        OrderSet.CouponBoxAlert = "";
+
+        OrderSet.AuctionNo = 0;
+        OrderSet.BranchZipCode = "";
+        OrderSet.ClassCode = "";
+        OrderSet.ClassKind = "";
+        //CPC
+        OrderSet.DiscountInfo = [];
+
+        //DiscountBiz 수정 필요해보임.
+        
+        OrderSet.BaseCostBasisNoArr = [6072686950,5543217022];
+		
+
+		OrderSet.DiscountKey = ""
+
+		OrderSet.GiftShopShippingCost = 0;
+        OrderSet.GiftShopTransDay = 0;
+        OrderSet.InterestGroupNo = 0;
+        OrderSet.IsFreeInterestExist =  true;
+        OrderSet.IsInstantOrder = false; //조작
+        OrderSet.ItemNo = "1650687264";
+    	OrderSet.ItemNm = "남자 면 바지 슬랙스 9부 배기 팬츠 밴딩 조거 kw54";
+    	OrderSet.GroupIndex = "01";
+        OrderSet.Keyword = "";
+        OrderSet.KeywordSeq = 0;
+		OrderSet.MountBranchSequence = 0; //조작
+        OrderSet.OptionInfo = [];
+        OrderSet.OrderQty = 1;
+        OrderSet.PartnershipCode = "";
+        OrderSet.IsCore = true;
+        OrderSet.PCID = "W";
+        OrderSet.PrePaidType = 1; //조작
+        OrderSet.QuickArriveZipCode = "";
+        OrderSet.ShippingGroupNo = 579691489; // 조작???
+        OrderSet.ShopCode = "";
+        OrderSet.ShoppingGuideNo = 0;
+        OrderSet.SID = 0;
+		OrderSet.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36";
+        OrderSet.IsCPC = false ;
+        OrderSet.SellerCustNo = "138128100";
+    	OrderSet.IsSmartDelivery =  false;
+
+    	OrderSet.BranchPrice = 0;
+		OrderSet.Discount = {"IsDc":true,"OriginPrice":"23,000","DcPrice":"22,150","SpanCostPrice":"850","SpanCostRatePrice":"3","CreditCardDcPrice":"17,150","CreditCardDcRate":"99.9","CreditCardInstantDcCount":"(2개)","CreditCardPointDcCount":"","CreditCardInstantDc":[{"Name":"스마일카드 첫 결제 혜택","DcPrice":"17,150","DcRate":"99.9","MaxDcPrice":"5,000","MinBasePrice":"5,100"},{"Name":"스마일페이 삼성카드10%","DcPrice":"19,940","DcRate":"10","MaxDcPrice":"10,000","MinBasePrice":"5,000"}],"CreditCardPointDc":[],"FreeInterestCardImageHtml":"<img src=\"http://image.gmarket.co.kr/UPLOAD_IMAGE/2020/01/20/G마켓_무이자할부_202001_PC.jpg\">","CardAdditionalBenefitHtml":"<a href=\"https://spweb.gmarket.co.kr/ko/plcc/intro/index?source=ebaykorea&medium=G%5FP%5FWEB%5FH&userType=P\" target=\"_blank\"><img src=\"http://image.gmarket.co.kr/UPLOAD_IMAGE/2018/06/18/스마일카드_제휴카드혜택_노출.jpg\" width=\"318\" height=\"62\" alt=\"스마일카드\"></a>\r\n\r\n<a href=\"http://rpp.gmarket.co.kr/?exhib=35222\" target=\"_blank\"><img src=\"//image.gmarket.co.kr/UPLOAD_IMAGE/2019/02/01/bn_card_318x62_카카오뱅크.jpg\" width=\"318\" height=\"62\" alt=\"카카오뱅크 프렌즈 체크카드\"></a>","isOutOfStock":false,"hasDC":true,"isCreditCardInstantDc":true,"isCreditCardPointDc":false,"HasFreeInterestCardImage":true,"HasCardAdditionalBenefit":true,"CostBasisNo":"60726869505543217022","CostBasisNm":"대량자동할인 자동생성정책[상품별할인] 상품번호:1650687264","CostResult":"3.3000100.0000","CostBasisKind":"상품별할인상품별할인","CostUnit":"RM","CostPrice":850.0,"CostPriceYN":"Y","CostWhoFee":"GDME","DealerCostBasisNo":"","DealerCostPrice":0.0,"Sid":0,"PdcCostPrice":0.0,"DealerCostUnit":null,"DealerCostResult":0,"PersonalCouponMaster":null,"PersonalCouponDetail":null,"DcMasterSeqNo":"0","DcCouponNo":"","UsedZeromarginSale":0.0,"GmarketCostBasisKind":"","IsJaehuCheck":true,"PluralCouponDetail":"","UsedCoupon":"","PosClassCd":"","CustomerNo":"","IsZeroMargin":false,"JaehuId":"","LoginId":"","CustomerTelNo":"enUS","PluralKey":"H8xNI2OTAINNzR01DjNjgTU0LVY5NUw3MzYwjY0fMzIxNzAyMn8IfzIwMjAwNTI5fzIwMjQxOS45Njk5MjAxf39/","CouponBoxAlert":""};
+
+        OrderSet.IsOrderLimit = false ;
+        OrderSet.IsECouponTarget = false ;
+        OrderSet.IsSmileClub = false;
+        OrderSet.IsSmilePay = false;
+        OrderSet.IsExpressShop = false;
+        OrderSet.MinBuyCount = 1;
+        OrderSet.BuyUnitCount = 1;
+        OrderSet.MinSellAmount = 99940;
+        OrderSet.IsBizOnItem = false;
+        OrderSet.I…

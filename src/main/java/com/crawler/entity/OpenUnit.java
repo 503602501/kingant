@@ -180,9 +180,9 @@ public class OpenUnit  extends Unit{
 				
 				product.setAddThreshold();
 				url = product.getUrl(); //如果是不需要打开新的页面此处为空
-				if(StringUtils.isEmpty(url)){
+				/*if(StringUtils.isEmpty(url)){
 					continue;
-				}
+				}*/
 				
 //				System.out.println("链接_____________________:"+url);
 				boolean success = false;
@@ -191,11 +191,11 @@ public class OpenUnit  extends Unit{
 					success =DriverUtil.navigateUrl(storage, url,this.getTimeout(),this.getExists());
 				}
 				
-				if(this.exists==null && url!=null){
+				if(this.exists==null && !StringUtils.isEmpty(url)){
 					success =DriverUtil.navigateUrl(storage, url,this.getTimeout());
 				}
 				
-				if(url!=null && success==false){
+				if(!StringUtils.isEmpty(url)&& success==false){
 					if( product.getThreshold()<threshold){
 					    if(isMajor()){  //主线程
 					    	storage.putInputUrlProduct(product); 

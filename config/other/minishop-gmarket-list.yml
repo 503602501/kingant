@@ -1,0 +1,4 @@
+open: {id:"minishop-gmarket-list",filter:false,image:false,name:"minishop分类链接",link:"input",major:true,brower:"chrome",timeout:20,threads:1,remark:"http://minishop.gmarket.co.kr/mamalucia/List?Category=100000085&DisplayType=None&SortType=None"}
+    page: {xpath:"//a[@class='current']/following-sibling::a"}
+      list: {xpath:"//div[@class='prod_list']/ul/li/p/a",wait:3000}
+         text: {xpath:"",attribute:"href",name:"链接"}

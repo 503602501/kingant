@@ -58,8 +58,8 @@ public class FilterUtil {
 	
 	public static void main(String[] args) {
 		
-		String s = "asdlklklk<li>抖音号：<span>62123962</span></li>ddddd</span>dd";
-//		System.out.println(getRegexContent(s, "match|(?<=抖音号：<span>)(.*)(?=</span>)"));
-		System.out.println(cutString(s,"抖音号：<span>" , "</span>"));
+		String s = " (1黄埔1) 中山大道中金碧世纪花园";
+		System.out.println(getRegexContent(s, "match|(?<=(1)(.*)(?=1))"));
+//		System.out.println(cutString(s,"抖音号：<span>" , "</span>"));
 	}
 }

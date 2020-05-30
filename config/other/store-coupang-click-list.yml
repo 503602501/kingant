@@ -1,0 +1,3 @@
+open: {id:"store-coupang-click-list",filter:false,image:false,init:"https://store.coupang.com",name:"store.coupang手工分类链接",link:"",major:true,brower:"chrome",timeout:20,threads:1,remark:"https://store.coupang.com/vp/vendors/C00231716/products?vendorName=Xiamen+daojing+trading+co.+LTD&productId=9800311&outboundShippingPlaceId="}
+    list: {xpath:"//ul[@id='product-list']/li/a",scroll:-1}
+       text: {xpath:"",attribute:"href",name:"链接"}

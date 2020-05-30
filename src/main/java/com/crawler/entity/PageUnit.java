@@ -39,6 +39,7 @@ public class PageUnit  extends UnitAdapter{
 			return ;
 		}
 		
+		System.out.println(";;;;"+storage.getPageCount());
 		//设置当前的分页数量
 		if(this.getCount()!=null && storage.getPageCount()==null){
 			storage.setPageCount(this.getCount());

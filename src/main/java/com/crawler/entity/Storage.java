@@ -365,6 +365,7 @@ public class Storage {
 	}
 
 	public void setPageCount(Integer pageCount) {
+		System.out.println("设置："+pageCount);
 		this.pageCount = pageCount;
 	}
 
@@ -381,6 +382,7 @@ public class Storage {
 				}
 				
 				for (String download : downloadLables) {  //循环所有需要下载的字段名称
+					
 					Integer index = getDownloadLableIndex(download);
 					String https = null;
 					
@@ -389,7 +391,12 @@ public class Storage {
 					 product.setHeader(header);
 					 product.setDownloadIndex(index);
 					 https =  row.get(index) ;
-					 if(https.trim().lastIndexOf("http")!=0){//http的位置不为0,说明有多个http下载，需要做分割处理
+					 
+					 if(StringUtils.isEmpty(https) ){
+						 continue ;
+					 }
+					 
+					 if(  https.trim().lastIndexOf("http")!=0){//http的位置不为0,说明有多个http下载，需要做分割处理
 						 for (String http : https.split(",")) {
 							 if(http.trim().length()==0){
 								 continue;

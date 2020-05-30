@@ -180,9 +180,9 @@ public class OpenUnit  extends Unit{
 				
 				product.setAddThreshold();
 				url = product.getUrl(); //如果是不需要打开新的页面此处为空
-				if(StringUtils.isEmpty(url)){
+				/*if(StringUtils.isEmpty(url)){
 					continue;
-				}
+				}*/
 				
 //				System.out.println("链接_____________________:"+url);
 				boolean success = false;
@@ -191,11 +191,11 @@ public class OpenUnit  extends Unit{
 					success =DriverUtil.navigateUrl(storage, url,this.getTimeout(),this.getExists());
 				}
 				
-				if(this.exists==null && url!=null){
+				if(this.exists==null && !StringUtils.isEmpty(url)){
 					success =DriverUtil.navigateUrl(storage, url,this.getTimeout());
 				}
 				
-				if(url!=null && success==false){
+				if(!StringUtils.isEmpty(url)&& success==false){
 					if( product.getThreshold()<threshold){
 					    if(isMajor()){  //主线程
 					    	storage.putInputUrlProduct(product); 
@@ -283,7 +283,7 @@ public class OpenUnit  extends Unit{
 				logger.error("主线程运行页面处理异常:",e);
 			}
 			storage.clearPageCount();
-			
+			storage.getEnv().setStop(true);			
 			if(this.link==null){  //说明是init初始化页面，页面打开完成采集后，就不需循环,运行一次就退出循环啦
 				logger.info("link为空退出");
 				break;

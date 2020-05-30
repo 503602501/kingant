@@ -1,5 +1,6 @@
-
 package com.crawler.handler.text.impl;
+
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,27 +9,25 @@ import org.openqa.selenium.WebElement;
 import com.crawler.entity.Storage;
 import com.crawler.entity.TextUnit;
 import com.crawler.handler.text.IText;
-import com.crawler.util.StringUtils;
+import com.crawler.util.FilterUtil;
 
-public class CoupangSizeText implements IText {
+public class BeiKeImgText implements IText {
 
 	@Override
 	public String getText(String text,WebElement web,WebDriver webDriver,TextUnit textUnit,Storage storage) {
 		
-		 String s="";
+		StringBuffer sb = new StringBuffer();
 		try {
-			WebElement  webElement =webDriver.findElement (By.xpath("//ul[@class='Dropdown-Select__Dropdown']"));
+			List<WebElement> webs =   webDriver.findElements(By.xpath("//ol[@id='overviewThumbnail']/li"));
 			
-			 s = webElement.getAttribute("innerHTML");
-			 s =s.replaceAll("</li>", ",</li>");
-			 
-			 s = StringUtils.delHtml(s);
+			for (WebElement webElement : webs) {
+				sb.append(webElement.getAttribute("data-src")+",");
+				
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 return s ;
-		
+		return sb.toString() ;
 	}
-
 }

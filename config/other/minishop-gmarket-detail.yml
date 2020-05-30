@@ -1,0 +1,8 @@
+open: {id:"minishop-gmarket-detail",filter:false,image:false,name:"minishop详情",link:"input",major:true,brower:"chrome",timeout:20,threads:1,remark:"https://store.coupang.com/vp/vendors/C00231716/products?vendorName=Xiamen+daojing+trading+co.+LTD&productId=9800311&outboundShippingPlaceId="}
+       text: {xpath:"//div[@id='itemcase_basic']/h1",name:"标题"}
+       text: {xpath:"//strong[@class='price_real']",name:"价格"}
+       text: {xpath:"//ul[@class='viewer']/li[1]/a/img",attribute:"src",name:"主图链接"}
+       text: {xpath:"",name:"颜色",handler:"MinishopColorText"}
+       text: {xpath:"",name:"尺码",handler:"MinishopSizeText"}
+       text: {xpath:"",iframe:"//div[@class='vip-detailarea_seller']/iframe",name:"详情链接",handler:"MinishopDetailText"}
+       text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}

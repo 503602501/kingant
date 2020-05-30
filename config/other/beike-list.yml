@@ -1,0 +1,4 @@
+open: {id:"beike-list",filter:false,image:false,name:"贝壳列表链接",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+  page:{xpath:"//a[text()='下一页']"}  
+    list: {xpath:"//ul[@class='listContent']/li",wait:3000}
+       text: {xpath:"/a",attribute:"href",name:"链接"}

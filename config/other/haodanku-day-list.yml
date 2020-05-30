@@ -1,0 +1,8 @@
+open: {id:"haodanku-day-list",filter:false,labels:"开始页码,结束页码",image:true,name:"好单库今日爆单商品信息",link:"",major:true,urlhandler:"HaodanKu",brower:"chrome",timeout:10,threads:1,remark:"https://www.haodanku.com/item/index"}
+  page:{xpath:"//a[@class='next']",wait:1000}
+    list: {xpath:"//ul[@class='inProduc-l-list js-inProducHover clearfix' or @class='inProduc-t-list js-inProducHover clearfix']/li",wait:3000}
+       text: {xpath:"/div[@class='inProduc-l-de']",attribute:"innerHTML",fragment:true,name:"店铺名",handler:"HaoDanText"}
+       text: {xpath:"/div[@class='inProduc-l-conter']/div/div/h5/text()",fragment:true,name:"标题"}
+       text: {xpath:"/div[@class='inProduc-l-conter']/div/div/ul/li[1]/span/text()",fragment:true,name:"卷后价"}
+       text: {xpath:"/div[@class='inProduc-l-conter']/div/div/ul/li[3]/span/text()",fragment:true,name:"佣金"}
+       text: {xpath:"/div[@class='inProduc-top']/div/div/span[2]/@datatips",fragment:true,attribute:"datatips",name:"商品链接",handler:"HaoDanKuText"}

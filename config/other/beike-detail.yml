@@ -1,0 +1,12 @@
+open: {id:"beike-detail",filter:false,image:false,name:"贝壳详情",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+    text: {xpath:"//h1[@class='main']",name:"小区名称"}
+    text: {xpath:"//h1[@class='main']",name:"文件夹位置",filename:true}
+    text: {xpath:"//div[@class='sub']",name:"小区位置"}
+    text: {xpath:"//div[@class='sub']",name:"小区位置括号内",handler:"BeiKeText"}
+    text: {xpath:"//span[text()='物业公司']/following-sibling::span",name:"物业公司"}
+    text: {xpath:"//div[@class='container']/div/a[1]",name:"位置1"}
+    text: {xpath:"//div[@class='container']/div/a[2]",name:"位置2"}
+    text: {xpath:"//div[@class='container']/div/a[3]",name:"位置3"}
+    text: {xpath:"//div[@class='container']/div/a[4]",name:"位置4"}
+    text: {xpath:"//ol[@id='overviewThumbnail']/li[1]",attribute:"data-src",name:"第一张",download:true}
+    text: {xpath:"",handler:"BeiKeImgText",name:"全部链接"}

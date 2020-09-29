@@ -6,3 +6,4 @@ open: {id:"store-coupang-detail",filter:false,image:false,name:"store.coupang详
        text: {xpath:"",name:"尺码",handler:"CoupangSizeText"}
        text: {xpath:"",name:"详情链接",handler:"CoupangDetailText"}
        text: {xpath:"",name:"商品链接",handler:"CommonCurrentUrl"}
+       text: {xpath:"//div[@class='prod-description']/ul/li[last()]",name:"编号",regex:"replace|쿠팡상품번호:",params:""}

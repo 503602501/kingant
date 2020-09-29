@@ -1,0 +1,9 @@
+open: {id:"lazada-detail",filter:false,image:true,name:"lazada详情",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.lazada.com.my/"}
+         text: {xpath:"//div[@class='pdp-product-title']/div/span",name:"标题",wait:2000}
+         text: {xpath:"//img[@class='pdp-mod-common-image gallery-preview-panel__image']",attribute:"src",name:"主图链接"}
+         text: {xpath:"//div[@class='pdp-product-price']/span",name:"价格"}
+         text: {xpath:"//div[@class='pdp-product-price']/span",name:"尺码"}
+         text: {xpath:"//div[@class='pdp-product-price']/span",name:"颜色"}
+         text: {xpath:"//div[@class='html-content detail-content']",attribute:"innerHTML",name:"代码"}
+         text: {xpath:"//div[@class='html-content detail-content']",attribute:"innerHTML",name:"文字",handler:"DelHTMLTagHandler"}
+         text: {xpath:"//div[@class='html-content detail-content']",attribute:"innerHTML",name:"详情图片链接"}

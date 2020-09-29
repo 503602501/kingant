@@ -1,0 +1,5 @@
+open: {id:"alibaba-list",name:"阿里巴巴店铺链接",link:"input",timeout:15,threads:1,major:true,brower:"chrome",remark:"大淘客：http://www.dataoke.com/qlist/?px=zh&page=4"}
+   page: {xpath:"//button[@class='next-btn next-btn-normal next-btn-medium next-pagination-item next' and not(@disabled)]"}
+      list: {xpath:"//div[@class='component-product-list']/div/div/div/a",wait:2000}
+         text: {xpath:"",name:"商品链接",attribute:"href"}
+    

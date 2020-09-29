@@ -15,6 +15,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.net.ssl.SSLContext;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.Consts;
@@ -31,8 +33,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.ssl.SSLContexts;
-import org.apache.http.ssl.TrustStrategy;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -490,9 +490,23 @@ public class HttpUtil {
      * @throws Exception 
 	 */ 
 	public static void main(String[] args) throws Exception {
+	 
+	
 		
-	 	String contents= HttpUtil.getHtmlContent( "https://www.carid.com/weathertech/digitalfit-molded-floor-liners-1st-row-tan-mpn-458391.html");
-	 	System.out.println(contents);
+		String url =  "http://www.k3.cn/p/ipbabaaeuaa.html?_page=10&_cat=106&_pos=95&_type=img?form=" ;
+	 	String contents= HttpUtil.getHtmlContent(url);
+	 	
+		Document doc = Jsoup.parse(contents); // 使用jsoup 进行语言转换
+		String userId = doc.select("input#data-show").attr("data-user_id");// 商品标题 #使用css方式
+		String dataHash = doc.select("input#data-show").attr("data-hash");// 商品标题 #使用css方式
+		
+	 	System.out.println(dataHash);
+	 	
+		url =  String.format("http://www.k3.cn/ajax/product/get_status_category/ipbabaaeuaa/%s/%s?_=%s", userId,dataHash,System.currentTimeMillis());
+		contents= HttpUtil.getHtmlContent(url);
+		String state = JsonUtil.getJSONValue("data->product->state", contents) ;
+		System.out.println("state:"+contents);
+		System.out.println( "0".equals(state) ? "已下架": "weilai");
 	 	if(contents!=null){
 	 		return ;
 	 	}

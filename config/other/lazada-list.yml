@@ -1,0 +1,4 @@
+open: {id:"lazada-list",filter:false,image:false,name:"lazada链接",init:"https://www.lazada.com.my/",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.lazada.com.my/"}
+    page: {xpath:"//li[@title='Next Page' and @aria-disabled='false']/a[@class='ant-pagination-item-link']"}
+      list: {xpath:"//a[@age=0 and @title]",wait:3000}
+         text: {xpath:"",attribute:"href",name:"链接"}

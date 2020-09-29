@@ -1,0 +1,2 @@
+open: {id:"seller-dhgate-detail",labels:"前缀",filter:false,init:"http://seller.dhgate.com",image:false,name:"dhgate修改前缀",link:"input",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/359880396.html"}
+    text: {xpath:"", name:"修改前缀",handler:"DhgateText"}

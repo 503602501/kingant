@@ -1,4 +1,4 @@
-open: {id:"book-kongfz-list-detail",labels:"延迟（秒）",expire:"{date:'20200615',message:''}",filter:false,image:false,name:"孔夫子旧书网ISBN",link:"input",major:true,brower:"phantomjs",timeout:10,threads:3,remark:"http://book.kongfz.com/194799/958535800/"}
+open: {id:"book-kongfz-list-detail",labels:"延迟（秒）",expire:"{date:'20210815',message:''}",filter:false,image:false,name:"孔夫子旧书网ISBN",link:"input",major:true,brower:"phantomjs",timeout:10,threads:3,remark:"http://book.kongfz.com/194799/958535800/"}
     text:{xpath:"",name:"延迟时间",handler:"DelaySecondText",show:false}
     text: {xpath:"//li[contains(text(),'ISBN')]",spare:"//span[contains(text(),'ISBN')]/following-sibling::span",name:"ISBN",regex:"replace|ISBN:",params:""}
     

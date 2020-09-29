@@ -1,0 +1,8 @@
+open: {id:"amazon-technical-detail",filter:false ,image:false,urlhandler:"TechnicalUrl",name:"亚马逊详情",exists:"//div[@id='prodDetails']||//h2[contains(text(),'Product details')]",link:"input",init:"https://www.amazon.com/dp/B073LWQ5PT",major:true,brower:"chrome",timeout:10,threads:1,remark:"https://www.amazon.de/"}
+       text: {xpath:"",name:"ASIN",handler:"ZASINText"}
+       text: {xpath:"//th[contains(text(),'Manufacturer')]/following-sibling::td",spare:"//ul/li[position()>2]/span/span[contains(text(),'Manufacturer')]/following-sibling::span",name:"Manufacturer"}
+       text: {xpath:"//span[@id='priceblock_ourprice']",name:"价格",handler:"ZamaPrice"}
+       text: {xpath:"//th[contains(text(),'Best Sellers Rank')]/following-sibling::td",name:"第一种类排名",params:"1",handler:"TechnicalText"}
+       text: {xpath:"//th[contains(text(),'Best Sellers Rank')]/following-sibling::td",name:"第一种类",params:"2",handler:"TechnicalText"}
+       text: {xpath:"//th[contains(text(),'Best Sellers Rank')]/following-sibling::td",name:"第二种类排名",params:"3",handler:"TechnicalText"}
+       text: {xpath:"//th[contains(text(),'Best Sellers Rank')]/following-sibling::td",name:"第二种类",params:"4",handler:"TechnicalText"}

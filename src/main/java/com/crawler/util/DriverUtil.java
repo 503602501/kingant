@@ -69,7 +69,24 @@ public class DriverUtil {
 			return false;
 		}*/
 
-		List<String> xpaths =Arrays.asList(success.split("\\|"));
+		if(success.indexOf("||")!=-1){
+			
+			List<String> xpaths =Arrays.asList(success.split("\\|\\|"));
+			
+			WebDriver driver = storage.getDriverEntity().getWebDriver();
+			
+			for (String string : xpaths) {
+				try {
+					driver.findElement(By.xpath(string));
+					return true ;
+				} catch (Exception e) {
+					logger.error("页面加载失败判断:"+e.getMessage());
+				}
+			}
+			return false;
+		}
+		
+		List<String> xpaths =Arrays.asList(success.split("\\|\\|"));
 		
 		try {
 			WebDriver driver = storage.getDriverEntity().getWebDriver();
@@ -256,6 +273,12 @@ public class DriverUtil {
 			
 				 ChromeDriverService service = new ChromeDriverService.Builder().usingDriverExecutable(new File("chrome/chromedriver.exe")).usingAnyFreePort().build();
 				 driver= new ChromeDriver(service, cps);
+			/*	 String s = "ak_bmsc=06D5F51212DF6879AE476DA8A887000717352196AE49000060CDEC5E9B3B5835~pl403cf7pwoTpN2uG8Oq/2aLOGPMByALnCPs36MCqdUhu4EOYZg80bm5GR9SUcTyhFvZsRf34I2MYywyFVvhQgPs5shZM+XBVFKuqrI4GMTLz7VppAJo/SHHK57rJstQJ4izAPqz8zP7B8Gu3LdE9m6Dp79YbkxVJJKKqz3Uq+ZSMxD3+e/e9jzQ4hpgOcCR4oPceWtk/8a1q/IJK2O6H6jUNWpUQx3nkFjkUAqq8R6WM=; expires=Fri, 19 Jun 2020 16:36:16 GMT; max-age=7200; path=/; domain=.coupang.com; HttpOnly" ;
+				 String[] array = s.split(";") ;
+				 for (String string : array) {
+					 driver.manage().addCookie(new Cookie(string.split("=")[0] , string.indexOf("=")==-1? "": string.split("=")[1])) ;
+				}	*/ 
+				 
 				 service.start();
 				 entity.setDriverService(service);
 				 entity.setWebDriver(driver);
@@ -464,6 +487,9 @@ public class DriverUtil {
    }
    
    public static void main(String[] args) {
-	   System.out.println(handleUrl("https://m.1688.com/", "//cbu01.alicdn.com/img/ibank/2015/458/647/2246746854_697712506.jpg"));
+	   String success = "//div[@id='prodDetails']||//h2[contains(text(),'Product details')]" ;
+		List<String> xpaths =Arrays.asList(success.split("\\|\\|"));  
+		System.out.println(xpaths);
+		System.out.println(success.indexOf("||"));
   }
 }

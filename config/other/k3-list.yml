@@ -1,0 +1,2 @@
+open: {link:"input",id:"k3-list",expire:"{date:'20201220',message:'运行异常'}",urlhandler:"K3httpUrl",name:"k3商品链接检测",timeout:15,threads:1,major:true,brower:"phantomjs",remark:"http://www.k3.cn/p/ifouibaaoau.html?_page=14&_cat=all&_pos=83&_type=img?form=#0#0"}
+      text: {xpath:"",name:"无效链接"}

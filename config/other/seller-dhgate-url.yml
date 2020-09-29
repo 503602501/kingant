@@ -1,0 +1,4 @@
+open: {id:"seller-dhgate-url",filter:false,init:"http://seller.dhgate.com/prodmanage/shelf/prodShelf.do?dhpath=10001,21001,0202#DH-CP-1",image:false,name:"dhgate链接",link:"",major:true,brower:"chrome",timeout:10,threads:1,remark:"http://www.youlu.net/shop/293993/359880396.html"}
+     page:{xpath:"//span[@class='disablebtn disablebtn_no_bod_pad']/parent::a",focus:true}
+        list:{xpath:"//div[@class='dd j-multi-edit-content']/a[@name='ahref_updateProduct'][not(contains(text(),'翻译中'))]",wait:3000}
+          text: {xpath:"",attribute:"href", name:"商品链接"}

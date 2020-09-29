@@ -61,12 +61,21 @@ public class ZmazonhttpUrl implements IOpen {
 				  
 				  
 				  
-				 String review= FilterUtil.cutString( content, "total-review-count", "<");
-				 review = review.replace("\"", "").replace("=", "").replace(">", "");
+				 String review= FilterUtil.cutString( content, "acrCustomerReviewText", "</span>");
+				 review = review.substring(review.indexOf(">"));
+				 if(review.indexOf(">")!=-1){
+					 review = review.replace("ratings", "").replace(">", "");
+				 }else{
+					 review="";
+				 }
 				  
+				 
 				 String rank = FilterUtil.cutString( content, "class=\"a-icon-alt\">", "<");
 				 rank = rank.replace("\"", "").replace("=", "").replace(">", "");
-				  
+				 rank = rank.replace("out of 5 stars", "");
+				 if(rank.length()>10){
+					 rank="";
+				 }
 				/* String band = FilterUtil.cutString( content, "a-color-secondary a-size-base prodDetSectionEntry", "</td>");
 				 band = band.substring(band.indexOf("a-size-base"));
 				 band = band.replace("\"", "").replace("=", "").replace(">", "").replace("a-size-base", "").trim();
@@ -82,15 +91,51 @@ public class ZmazonhttpUrl implements IOpen {
 					 band = content.substring(content.indexOf("id=\"bylineInfo\""));
 					 band = band.substring(0,band.indexOf("</div>"));
 					 band = StringUtils.delHtml("<"+band);
+					 band = band.replace("Visit the", "").replace("Store", "").replace("Brand:", "").trim();
 				 }
 				 
-				 
 				  String price= FilterUtil.cutString( content, "a-size-medium a-color-price priceBlockBuyingPriceString", "<");
+				  if(StringUtils.isEmpty(price)){
+					   price= FilterUtil.cutString( content, "a-size-medium a-color-price priceBlockSalePriceString", "<");
+				  }
+				  
+				  if(StringUtils.isEmpty(price)){
+					  price= FilterUtil.cutString( content, "olp-message a-color-price", "</span>");
+					  price = price.substring(price.indexOf("US"));
+				  }
+				  
+				  
 				  price = price.replace("\"", "").replace("=", "").replace(">", "");
+				  if(price.length()>100){
+					  
+					  price= FilterUtil.cutString( content, "priceblock_pospromoprice", "</span>");
+					  
+					  if(!StringUtils.isEmpty(price)){
+						  price =price.substring(price.indexOf("$"));
+					  }else{
+						  price="" ;
+					  }
+				  }
+				  
+				  if(price.length()>100  ){
+					  price= FilterUtil.cutString( content, "a-section a-spacing-small a-spacing-top-small", "</span>");
+					  
+					  if(price.indexOf("$")!=-1){
+						  price =price.substring(price.indexOf("$"));
+					  }
+					  
+				  }
+				  
+				  
+				  if(price.length()>100){
+					  price ="" ;
+				  }
 				  
 				  String seller= FilterUtil.cutString( content, "sellerProfileTriggerId'", "</a>");
 				  seller = seller.replace("\"", "").replace("=", "").replace(">", "");
-				  
+				  if(seller.indexOf("!doctype")!=-1){
+					  seller="";
+				  }
 				  
 				  String title = FilterUtil.cutString( content, "<title>", "</title>");
 				  title =title.replace("Amazon.com:", "").replace(": Gateway", "");
@@ -99,7 +144,7 @@ public class ZmazonhttpUrl implements IOpen {
 				  storage.getStoreData().addText(keyword, "关键词",storage);
 				  storage.getStoreData().addText(title, "标题",storage);
 				  storage.getStoreData().addText(price, "售价",storage);
-				  storage.getStoreData().addText(review, "回复数",storage);
+				  storage.getStoreData().addText(review, "评论数",storage);
 				  storage.getStoreData().addText(rank, "星级",storage);
 				  storage.getStoreData().addText(band, "品牌",storage);
 				  storage.getStoreData().addText(seller, "卖家",storage);

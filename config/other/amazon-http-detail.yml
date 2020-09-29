@@ -3,7 +3,7 @@ open: {link:"input",id:"amazon-http-detail",urlhandler:"ZmazonhttpUrl",name:"亚
       text: {xpath:"",name:"关键词"}
       text: {xpath:"",name:"标题"}
       text: {xpath:"",name:"售价"}
-      text: {xpath:"",name:"回复数" }
+      text: {xpath:"",name:"评论数" }
       text: {xpath:"", name:"星级" }
       text: {xpath:"",name:"品牌"}
       text: {xpath:"",name:"卖家"}

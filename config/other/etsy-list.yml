@@ -1,0 +1,6 @@
+open: {id:"etsy-list",filter:false,image:false,name:"etsy商品信息",link:"input",exists:"//div[@data-buy-box-region='price']/div/div/div/p",major:true,brower:"chrome",timeout:5,threads:1,remark:"http://www.youlu.net/shop/293993/0-1.html"}
+       text: {xpath:"//div[@data-component='listing-page-title-component']",name:"文件夹名-标题"}
+       text: {xpath:"//div[@data-buy-box-region='price']/div/div/div/p",name:"价格"}
+       text: {xpath:"//div[@data-id='description-text']/div[1]",name:"描述"}
+       list: {xpath:"//ul[contains(@class,'carousel-pane-list')]/li/img"}
+         text:{xpath:"",name:"大图链接",attribute:"data-src-zoom-image",download:true,show:false}

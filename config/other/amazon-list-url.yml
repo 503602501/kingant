@@ -1,3 +1,3 @@
 open: {link:"input",id:"amazon-list-url",name:"亚马逊链接",timeout:15,threads:1,major:true,brower:"chrome",remark:"https://www.amazon.com/s?k=TPU+key+cover&link_code=qs&sourceid=Mozilla-search&tag=mozilla-20"}
-    list: {xpath:"//div[@class='s-result-list s-search-results sg-row']/div",exclude:"Sponsored"}
+    list: {xpath:"//div[@class='s-main-slot s-result-list s-search-results sg-row']/div",exclude:"Sponsored"}
       text: {xpath:"//a[@class='a-link-normal a-text-normal']/@href",fragment:true,name:"链接",regex:"prefix|https://www.amazon.com"}

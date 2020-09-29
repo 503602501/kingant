@@ -58,8 +58,8 @@ public class FilterUtil {
 	
 	public static void main(String[] args) {
 		
-		String s = " (1黄埔1) 中山大道中金碧世纪花园";
-		System.out.println(getRegexContent(s, "match|(?<=(1)(.*)(?=1))"));
+		String s = "쿠팡상품번호: 1704412973 - 2900503570";
+		System.out.println(getRegexContent(s, "match|(쿠팡상품번호:.*)(?=\\?)"));
 //		System.out.println(cutString(s,"抖音号：<span>" , "</span>"));
 	}
 }

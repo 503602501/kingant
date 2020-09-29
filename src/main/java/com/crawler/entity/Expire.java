@@ -30,7 +30,7 @@ public class Expire {
         	
         } catch(ParseException px) {
             px.printStackTrace();
-            this.isExpire = true;
+            this.isExpire = false;
             return ;
         }
         
@@ -46,10 +46,10 @@ public class Expire {
         	String webTime=getNetworkTime();
         	Date bjdate = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(webTime);//定义起始日期
 		   
-		   if(bjdate.before(this.date)){
-			   isExpire = false;
-		   }else{
+		   if(bjdate.after(this.date)){
 			   isExpire = true;
+		   }else{
+			   isExpire = false;
 		   }
 		} catch (Exception e) {
 			 isExpire = false; 

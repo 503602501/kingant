@@ -1,4 +1,4 @@
-open: {id:"dataoke-list",name:"大淘客",link:"input",expire:"{date:'20190720',message:'运行异常'}",timeout:15,threads:1,major:true,brower:"chrome-phone",monitor:true,remark:"大淘客：http://www.dataoke.com/qlist/?px=zh&page=4"}
+open: {id:"dataoke-list",name:"大淘客",link:"input",expire:"{date:'20190720',message:'运行异常'}",timeout:15,threads:1,major:true,brower:"chrome",remark:"大淘客：http://www.dataoke.com/qlist/?px=zh&page=4"}
   list: {xpath:"//div[@class='goods-list clearfix']/div"}
     click:{xpath:"/div[1]/div[@class='goods-info']/div[@class='goods-qjy']/div/p"}
     text: {xpath:"/div[1]/div[@class='goods-info']/div[@class='goods-qjy']/div/p",name:"卷后价",regex:"replace|￥",params:""}

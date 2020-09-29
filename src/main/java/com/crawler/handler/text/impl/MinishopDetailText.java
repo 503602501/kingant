@@ -30,7 +30,10 @@ public class MinishopDetailText implements IText {
 			List<WebElement>  list =webDriver.findElements(By.xpath("//div[@id='basic_detail_html']/img"));
 			if(CollectionUtils.isEmpty(list)){
 				list =webDriver.findElements(By.xpath("//div[@class='ee-image']/img"));
-				
+			}
+			
+			if(CollectionUtils.isEmpty(list)){
+				list =webDriver.findElements(By.xpath("//div[@id='basic_detail_html']/p/img"));
 			}
 			
 			for (WebElement web2 : list) {

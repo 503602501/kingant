@@ -39,7 +39,6 @@ public class PageUnit  extends UnitAdapter{
 			return ;
 		}
 		
-		System.out.println(";;;;"+storage.getPageCount());
 		//设置当前的分页数量
 		if(this.getCount()!=null && storage.getPageCount()==null){
 			storage.setPageCount(this.getCount());
@@ -73,6 +72,29 @@ public class PageUnit  extends UnitAdapter{
     			}
 			} catch (Exception e) {
 			}
+    	}
+    	
+    	if(id.equals("asycm.taobao.com-xpath-config")  ){
+    		try {
+    			WebElement validate = webDriver.findElement(By.xpath("//iframe[@id='sufei-dialog-content']")); //存在弹出验证码
+    			
+    			if(validate!=null){
+        			for (int i = 0; i < 10000; i++) {
+        				Thread.sleep(1000);
+        				 try {
+        					 validate = webDriver.findElement(By.xpath("//iframe[@id='sufei-dialog-content']")); //存在弹出验证码
+    					} catch (Exception e) {
+    						break; 
+    					}
+        				 
+    				}
+        			
+        		}
+    			
+			} catch (Exception e) {
+				
+			}
+    		
     	}
     	
     	 
@@ -146,6 +168,7 @@ public class PageUnit  extends UnitAdapter{
 	    			Thread.sleep(500);
 	    		}
 	    	}
+	    	
 	    	
 		} catch (NoSuchElementException e) {
 			System.out.println("淘宝无反采集.....");

@@ -4,7 +4,7 @@ open: {id:"asycm.taobao.com-xpath-config",image:true,sort:true,exportall:true,ex
    click: {xpath:"//span[text()='在线商品数']/parent::span/span[1]",wait:500}
    click: {xpath:"//span[text()='直通车参考价']/parent::span/span[1]",wait:500}
    input: {xpath:"//input[@class='ant-input']",value:"input",keydown:true,script:"window.scrollTo(0,0);"}
-      page:{xpath:"//li[@aria-disabled='false' and @title='下一页']/a",count:5,wait:3000}
+      page:{xpath:"//li[@aria-disabled='false' and @title='下一页']/a",count:5,wait:8000}
 	      text: {xpath:"//input[@class='ant-input']",attribute:"value",name:"搜索关键词",global:true}
 	      list: {xpath:"//div[@class='ant-table-body']/table/tbody/tr"}
 	            text: {xpath:"/td[1]",name:"相关搜索词",handler:"SycmKeyText"}
